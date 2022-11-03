@@ -1,0 +1,13 @@
+Start
+    Input N
+          N <= 100
+       If N >= 75
+          Output A  
+       else if N >= 60
+          Output B
+       else if N >= 45
+          output C
+       else if N >= 35 
+          output D
+       else output E
+End      

@@ -1,0 +1,5 @@
+Start
+    Input Math, Physics, Chemistry
+        S = (Math + Physics + Chemistry)/3
+    Output S
+End.

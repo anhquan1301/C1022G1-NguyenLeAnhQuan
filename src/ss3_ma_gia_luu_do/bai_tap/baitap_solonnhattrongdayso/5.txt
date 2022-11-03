@@ -1,0 +1,9 @@
+Start
+   Input N và a1, a2, ..., aN 
+      Max = a1, i = 2
+   While (i<=N) {
+	if (max<ai) then {max=ai}
+	i++
+   }
+   Output max
+End

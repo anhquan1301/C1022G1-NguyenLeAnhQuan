@@ -1,0 +1,5 @@
+Start
+    Input N là số tiền Đô la Mỹ
+    S = N*23000
+    Output S         
+End.

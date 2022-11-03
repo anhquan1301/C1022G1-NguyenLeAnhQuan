@@ -1,0 +1,9 @@
+start
+    Input a, b, c
+        Max = a
+      If b>max
+      	max = b
+      If c>max
+		max = c
+    Output max
+End
