@@ -1,0 +1,20 @@
+table{
+    background-color: orange;
+    border-collapse: collapse;
+}
+.den{
+    width: 50px;
+    background-color: black;
+}
+    
+
+.trang{
+    height: 50px;
+    background-color: white;
+}
+.cotcam{
+    width: 10px;
+}
+.dongcam{
+    height: 10px;
+}
