@@ -6,3 +6,10 @@ tr{
     color: white;
     text-align: center;
 }
+table{
+    background-color: white;
+    text-align: center;  
+}
+.nen{
+   background-color: aqua;
+}
