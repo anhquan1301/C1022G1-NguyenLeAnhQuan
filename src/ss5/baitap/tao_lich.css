@@ -14,7 +14,10 @@
     color: blue;
 }
 .vien{
-    width: px;
-    height: 30px;
     border: 1px solid rgb(63, 58, 58) 
+}
+table{
+    border-collapse: collapse ;
+    table-layout: fixed;
+    width: 400px;
 }

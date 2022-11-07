@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Khách Hàng</title>
+    <link rel="stylesheet" href="tao_form_survey_khach_hang.css">
 </head>
 <body>
     <form action="">
@@ -86,9 +87,88 @@
         <br>
         <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
         <br>
-        <table>
-
+        <span>Please rate your level of agreement with the following statements.</span>
+        <br>
+        <table border="2">
+            <tr  class="b">
+                <th></th>
+                <th class="a">Strongly Disagree</th>
+                <th class="a">Disagree</th>
+                <th class="a">Agree</th>
+                <th class="a">Strongly Agree</th>
+            </tr>
+            <tr>
+                <th>Our products are priced fairly.</th>
+                <th>
+                    <input type="radio" id="1" name="1">
+                    <br>
+                    <label for="1">1</label>
+                </th>
+                <th>
+                    <input type="radio" id="2" name="1">
+                    <br>
+                    <label for="2">2</label>
+                </th>
+                <th>
+                    <input type="radio" id="3" name="1">
+                    <br>
+                    <label for="3">3</label>
+                </th>
+                <th>
+                    <input type="radio" id="4" name="1">
+                    <br>
+                    <label for="4">4</label>
+                </th>
+            </tr>
+            <tr  class="b">
+                <th>Our products are high quality.</th>
+                <th>
+                    <input type="radio" id="11" name="2">
+                    <br>
+                    <label for="11">1</label>
+                </th>
+                <th>
+                    <input type="radio" id="22" name="2">
+                    <br>
+                    <label for="22">2</label>
+                </th>
+                <th>
+                    <input type="radio" id="33" name="2">
+                    <br>
+                    <label for="33">3</label>
+                </th>
+                <th>
+                    <input type="radio" id="44" name="2">
+                    <br>
+                    <label for="44">4</label>
+                </th>
+            </tr>
+            <tr>
+                <th>You would recommend our product to a friend or coworker.</th>
+                <th>
+                    <input type="radio" id="13" name="3">
+                    <br>
+                    <label for="13">1</label>
+                </th>
+                <th>
+                    <input type="radio" id="23" name="3">
+                    <br>
+                    <label for="23">2</label>
+                </th>
+                <th>
+                    <input type="radio" id="34" name="3">
+                    <br>
+                    <label for="34">3</label>
+                </th>
+                <th>
+                    <input type="radio" id="45" name="3">
+                    <br>
+                    <label for="45">4</label>
+                </th>
+            </tr>
         </table>
+        <br>
+        <input type="submit" value="Submit">
     </form>
     
 
