@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉ số BMI</title>
+</head>
+<body>
+    <table>
+        <h2>Tính chỉ số cân nặng</h2>
+        <tr>
+            <td>
+                <label for="weight">Nhập cân nặng (kg)</label>
+            </td>
+            <td>
+                <input type="text" id="weight">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="height">Nhập chiều cao (m)</label>
+            </td>
+            <td>
+                <input type="text" id="height">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="BMI()">Kiểm tra</button>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    <script src="chi_so_BMI.js"></script>
+</body>
+</html>
