@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất hàng tháng</title>
+</head>
+<body>
+    <script>
+        let initMoney = +prompt("Nhập số tiền ban đầu")
+        let interestRate = +prompt("Nhập lãi suất hàng tháng")
+        let month = +prompt("Nhập số tháng cho vay")
+        let result = initMoney*interestRate*month/12*month
+            alert("Số tiền lãi: " + result);
+    </script>
+</body>
+</html>
