@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương trình tính tiền điện</title>
+</head>
+<body>
+    <script>
+        let kWh = +prompt("Nhập kWh");
+        let tienDien;
+            if(kWh>=401){
+                tienDien=kWh*2927  
+                 alert("tiền điện tháng này: " + tienDien + "vnđ")
+            }
+            else if(kWh>=301)
+            {
+                tienDien=kWh*2834  
+                 alert("tiền điện tháng này: " + tienDien + "vnđ")
+            }
+            else if(kWh>=201)
+            {
+                tienDien=kWh*2536  
+                 alert("tiền điện tháng này: " + tienDien + "vnđ")
+            }
+            else if(kWh>=101)
+            {
+                tienDien=kWh*2014  
+                 alert("tiền điện tháng này: " + tienDien + "vnđ")
+            }
+            else if(kWh>=51)
+            {
+                tienDien=kWh*1734  
+                 alert("tiền điện tháng này: " + tienDien + "vnđ")
+            }
+            else
+            {
+                tienDien=kWh*1678  
+                 alert("tiền điện tháng này: " + tienDien + "vnđ")
+            }
+                       
+    </script>
+</body>
+</html>

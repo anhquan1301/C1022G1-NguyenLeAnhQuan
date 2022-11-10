@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra a, b, c phải là cạnh của tam giác không?</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("Nhập số a");
+        let b = +prompt("Nhập số b");
+        let c = +prompt("Nhập số c");
+        let d = a > 0 && b > 0 && c > 0;   
+        let canhab = a+b;
+        let canhbc = b+c;
+        let canhac = a+c;
+            if( canhab>c && canhbc>a && canhac>b && d)
+                alert("Là cạnh của tạm giác")
+            else
+                alert("Không phải là cạnh của tam giác")    
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        let thuNhap = +prompt("Thu nhập cá nhân");
+        let thueCaNhan;
+            if(thuNhap>30000000){
+                thueCaNhan = thuNhap*25/100
+                alert(thueCaNhan + "VND")}
+            else if(thuNhap>20000000){
+                thueCaNhan = thuNhap*20/100
+                alert(thueCaNhan + "VND")} 
+            else if(thuNhap>10000000){
+                thueCaNhan = thuNhap*15/100
+                alert(thueCaNhan + "VND")} 
+            else if(thuNhap>5000000){
+                thueCaNhan = thuNhap*10/100
+                alert(thueCaNhan + "VND")}
+            else{
+                thueCaNhan = thuNhap*5/100-0
+                alert(thueCaNhan + "VND")}          
+    </script>
+</body>
+</html>

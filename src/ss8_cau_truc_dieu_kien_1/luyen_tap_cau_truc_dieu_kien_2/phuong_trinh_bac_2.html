@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhập số a");
+        let b = +prompt("nhập số b");
+        let c = +prompt("nhập số c");
+        let delta = Math.pow(b,2) - 4*a*c
+        let x = (-b)/(2*a)
+        let x1 = (-b+Math.sqrt(delta))/2*a
+        let x2 = (-b-Math.sqrt(delta))/2*a
+            if (delta>0 && a!=0){
+                alert("Nghiệm thứ nhất: x1= " + x1 )
+                alert("Nghiệm thứ hai: x2= " + x2 )
+            }
+            else if (delta==0 && a!=0) {
+                alert("Có nghiệm kép: x1 = x2 = " + x )
+            }
+            else{ 
+                alert("Vô nghiệm")
+            }
+    </script>
+</body>
+</html>
