@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+<body>
+    <p id="bai5"></p>
+    <script>
+        let a = 0;
+        let b = 1;
+        let c = a + b;
+        let result = 1;
+            for(let i=3; i<20; i++){
+                a = b
+                b = c
+                c = a+b
+                result += b
+            }
+            document.getElementById("bai5").innerHTML=result
+    </script>
+</body>
+</html>
