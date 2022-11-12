@@ -8,16 +8,16 @@
 </head>
 <body>
     <script>
-        let doanhthu = prompt("Nhập doanh thu tháng này");
-        let hoahong1 = doanhthu*5/100
-        let hoahong2 = doanhthu*7/100
-        let hoahong3 = doanhthu*10/100
-            if (doanhthu <= 500000)
-                alert("Tiền hoa hồng: " + hoahong1 + "VND");
-            else if(doanhthu <= 1000000)
-                alert("Tiền hoa hồng: " + hoahong2 + "VND");
+        let revenue = prompt("Nhập doanh thu tháng này");
+        let result1 = revenue*5/100
+        let result2 = revenue*7/100
+        let result3 = revenue*10/100
+            if (revenue <= 500000)
+                alert("Tiền hoa hồng: " + result1 + "VND");
+            else if(revenue <= 1000000)
+                alert("Tiền hoa hồng: " + result2 + "VND");
             else
-                alert("Tiền hoa hồng: " + hoahong3 + "VND");    
+                alert("Tiền hoa hồng: " + result3 + "VND");    
 
     </script>
 </body>
