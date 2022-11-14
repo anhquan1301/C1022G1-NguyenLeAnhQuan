@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập đoán số</title>
+</head>
+<body>
+    <button onclick="begin()">Bắt đầu</button>
+    <script>
+        function begin(){
+            let min = +prompt("Nhập giá trị nhỏ nhất")
+            let max = +prompt("Nhập giá trị lớn nhất")
+                
+            for (a = 1; a <= 3; a++) {
+                numbCheck = +prompt("Nhập số bạn đoán")
+                numbRan = Math.floor(Math.random() * max) + min;
+            if (numbCheck == numbRan) {
+                alert("Chúc mừng");
+                break;
+            } else {
+                if (y > x) {
+                    alert(" Số lớn hơn")
+                } else {
+                    alert(" Số nhỏ hơn")
+                }
+            }
+        }
+    }
+        
+    </script>
+</body>
+</html>

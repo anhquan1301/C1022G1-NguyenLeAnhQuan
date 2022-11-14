@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,j;
+let a=5;
+let b=1;
+let result='';
+for (i=1;i<=5;i++){
+    for (j=1;j<=i;j++){
+        result=result+ '*'
+    }
+    result=result+'<br>'
+}
+result=result+'<br>';
+for (i=5;i>=1;i--){
+    for (j=1;j<=i;j++){
+        result=result+ '*'
+    }
+    result=result+'<br>'
+}
+result=result+'<br>';
+for (i=1;i<=5;i++) {
+    for (j = 1; j <= a; j++) {
+        result=result+ '&ensp;'
+        if (a<0) break;
+    }
+    a=a-1;
+    for (j = 1; j <= i; j++) {
+        result=result+'*'
+    }
+    result=result+'<br>'
+}
+result=result+'<br>';
+for (i=5;i>=1;i--){
+    for (j = 1; j <= b; j++) {
+        result=result+ '&ensp;'
+        if (b>5) break;
+    }
+    b=b+1;
+    for (j=1;j<=i;j++){
+        result=result+ '*'
+    }
+    result=result+'<br>'
+}
+document.write(result);
+    </script>
+</body>
+</html>

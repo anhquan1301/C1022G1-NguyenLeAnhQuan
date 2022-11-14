@@ -7,19 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="bai3" ></p>
     <script>
         let a1=0;
         let a2=1;
         let a3=1;
-        let result = "0 0 1";
-        for(let i = 1; i<20; i++){
+        let result=0
+        for(let i = 1; i<=20; i++){
+            result = result + "<br>" + a3 
+            a3=a1+a2
             a1=a2
             a2=a3
-            a3=a1+a2
-            result = result + a3 + "<br>"
         }
-        document.getElementById("bai3").innerHTML=result;
+        document.write(result);
     </script>
 </body>
 </html>
