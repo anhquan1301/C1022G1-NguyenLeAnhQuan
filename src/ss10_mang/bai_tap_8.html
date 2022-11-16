@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8 luyện tập mảng 1</title>
+</head>
+<body>
+<script>
+    let array = new Array(10)
+    let array2;
+    for (i=0; i<array.length; i++) {
+        array[i] = parseInt(prompt('Nhập số thứ ' + (i+1)));
+    }
+    array2= array.sort(function(a, b) {
+        return b-a;
+    });
+   document.write(array2)
+</script>
+</body>
+</html>

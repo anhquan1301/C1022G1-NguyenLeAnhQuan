@@ -10,14 +10,16 @@
 <body>
     <h1 style="text-align: center">BẢNG CỬU CHƯƠNG</h1>
   <script>
-        let i, j, result;
-            result = "<table border='2'>"
+        let result;
+            result = "<table border='2' >"
              for(i = 1; i <= 10; i++){
                 result = result + "<tr style='height: 50px'>";
                 for( j = 1; j <= 10; j++){
                     result = result + "<th style='width: 200px'>" + j + "x" + i + "=" + i*j + "</th>";
                 }
+                result = result + "</tr>"
              }
+             result = result + "</table>"
              document.write(result)
   </script>
 </body>

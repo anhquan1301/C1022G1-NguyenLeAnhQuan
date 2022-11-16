@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = prompt('Nhập số bất kỳ vào');
+    let numbArray = Array.from(String(numb), Number);
+    for (i =0; i<numbArray.length; i++) {
+        if (numbArray[i] %2 == 0 && numbArray[i-1] %2 ==0) {
+            numbArray.splice(i, 0 ,'-');
+        }
+    }
+    document.write(numbArray.join(''));
+</script>
+</body>
+</html>

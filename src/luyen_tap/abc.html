@@ -7,29 +7,15 @@
 <body>
 <div id="snto"></div>
 <script>
-    let n=+prompt('Nhập số n: ');
-    let e=1;
-    let result='';
-    function snt(k){
-        let    kt=true;
-        if (k<2) kt=false;
-        else
-        {   for (var i=2;i<=k/2;i++)
-            if (k%i==0)
-            {
-                kt=false;
-                break;
-            }
-        } return kt;
+    let num = +prompt("Nhập 1 số")
+    let total = 0
+    while( num != -1 ) {
+        num = +prompt("Nhập tiếp 1 số: ");
+        alert(num)
+        //phần code tính tổng
+        total += num
     }
-    for (var i=1;i<=Math.pow(n+1,2); i++){
-        if (snt(i)){
-            result= result+' '+ i.toString();
-            e+=1;
-            if (e>n) break;
-        }
-    }
-    document.getElementById('snto').innerHTML=result;
+        alert(total)
 </script>
 </body>
 </html>

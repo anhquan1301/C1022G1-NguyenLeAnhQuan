@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 6 của luyện tập mảng</title>
+</head>
+<body>
+    <script>
+        let numb = new Array(10);
+        // let flag = true;
+            for (let i=0; i< numb.length; i++){
+                 numb[i] = +prompt("Nhập 10 phần tử của mảng")
+            }
+        let numbV = +prompt("Nhập số nguyên V")
+        let check = numb.indexOf(numbV)
+
+        // document.write(check == flag ? "V is in the array" : "V is not in the array")
+            if (check != -1){
+                document.write("V is in the array")
+            }
+            else
+            {
+                document.write("V isn't in the array")
+            }
+
+    </script>
+</body>
+</html>

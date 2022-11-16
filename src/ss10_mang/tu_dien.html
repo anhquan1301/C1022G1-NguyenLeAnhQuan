@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    <form>
+        <input id="search" type="text" placeholder="Nhập từ cần tìm" >
+        <button onclick="translate()">Dịch</button>
+        <p id = "result"></p>
+    </form>
+    <script>
+        let result=""
+        function translate(){
+            let inPut = document.getElementById("search").value;
+            let arrayEng = ["car", "school", "class"];
+            let arrayVN = ["xe hơi", "trường học", "lớp học"];
+            let a = arrayEng.indexOf(inPut);
+            let b = arrayVN.indexOf(inPut);
+
+            if (a != 1){
+                result = arrayVN[a]
+            }
+            else if (b != 1){
+                result = arrayEng[b]
+            }
+            else
+                result = "Không có kết quả"
+
+        }
+        document.getElementById("result").innerHTML = result;
+
+
+
+
+
+
+    </script>
+</body>
+</html>

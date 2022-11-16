@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2 của luyện tập mảng</title>
+</head>
+<body>
+    <script>
+        let numb =[10,5,15,2,7,70,20,100,1,50];
+        let max = numb[0];
+        let count;
+            for(let i = 0; i<numb.length; i++)
+                if(max<numb[i]) {
+                    max = numb[i]
+                }
+                count = numb.indexOf(max);
+                document.write(" Phần tử lớn nhất: " + max + "<br>" + "có số thứ tự: " + count );
+    </script>
+</body>
+</html>

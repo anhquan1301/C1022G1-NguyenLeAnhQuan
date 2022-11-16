@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3 của luyện tập mảng</title>
+</head>
+<body>
+    <script>
+        let numbArray = +prompt("Bạn muốn nhập bao nhiêu phần tử mảng?");
+        let numb=[]
+        let max = 0
+        let avg = 0
+            for ( let i = 0; i < numbArray; i++){
+                numb = +prompt("Nhập phần tử mảng");
+                if(max<numb){
+                    max=numb
+                }
+                avg += numb
+            }
+            avg = avg / numbArray
+            document.write("Giá trị lớn nhất là: " + max + "<br>" + "Giá trị trung bình của các phần tử là: " + avg)
+
+
+
+    </script>
+</body>
+</html>

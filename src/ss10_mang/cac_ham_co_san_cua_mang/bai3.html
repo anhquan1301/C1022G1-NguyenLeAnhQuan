@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = prompt('Nhập chuỗi bất kỳ');
+    let result="";
+    for (let i=0; i<numb.length; i++) {
+        if (numb[i] === numb[i].toUpperCase()) {
+            result+=numb[i].toLowerCase();
+        }
+        else  {
+            result+=numb[i].toUpperCase();
+        }
+    }
+    document.write(result)
+</script>
+</body>
+</html>
