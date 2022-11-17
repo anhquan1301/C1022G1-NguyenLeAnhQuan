@@ -17,16 +17,12 @@
             let arrayEng = ["car", "school", "class"];
             let arrayVN = ["xe hơi", "trường học", "lớp học"];
             let a = arrayEng.indexOf(inPut);
-            let b = arrayVN.indexOf(inPut);
+            // let b = arrayVN.indexOf(inPut);
 
             if (a != 1){
-                result = arrayVN[a]
-            }
-            else if (b != 1){
-                result = arrayEng[b]
-            }
+                result = arrayVN[a]}
             else
-                result = "Không có kết quả"
+                result = arrayEng[a]
 
         }
         document.getElementById("result").innerHTML = result;

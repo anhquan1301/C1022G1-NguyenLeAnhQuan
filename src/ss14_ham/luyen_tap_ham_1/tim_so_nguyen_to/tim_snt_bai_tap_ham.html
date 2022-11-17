@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <script src="tim_snt_bai_tap_ham.js"></script>
+    <script>
+            let inputNumb = +prompt("Nhập số cần tìm")
+            let countSnt = 0
+            let a = 1
+                alert(isPrimeNumber(inputNumb) ? "Là số nguyên tố": "Không phải là số nguyên tố")
+                document.write("Những số thuộc số nguyên tố: " + "<br>")
+                while (countSnt<1000){
+                    if(isPrimeNumber(a)){
+                document.write(a + "<br>")
+                        countSnt++}
+                    a++
+                }
+    </script>
+
+</body>
+</html>

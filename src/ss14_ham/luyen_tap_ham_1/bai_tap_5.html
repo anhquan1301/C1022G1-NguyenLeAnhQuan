@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5 của luyện tập hàm 1</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function baiTap5() {
+            let n = prompt('Nhập tên chòm sao')
+            let a = arr1.indexOf(n)
+                if (a != -1)
+                    return arr2[a];
+        }
+                document.write(baiTap5())
+    </script>
+</body>
+</html>
