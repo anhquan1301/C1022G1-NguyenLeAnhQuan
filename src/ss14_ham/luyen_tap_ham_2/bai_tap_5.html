@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5 luyện tập của hàm 2</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("Nhập 3 số nguyên bất kì")
+        let b = +prompt("Nhập số thứ hai")
+        let c = +prompt("Nhập số thứ ba")
+            function soNguyen(x, y, z) {
+                if (x < y && x < z){
+                   return  alert("Số thứ nhất là số nguyên tố bé nhất")
+                }
+                else if (y < x && y < z){
+                   return  alert("Số thứ hai là số nguyên tố bé nhất")
+                }
+                else
+                   return  alert("Số thứ ba là số nguyên tố bé nhất")
+            }
+            soNguyen(a, b, c)
+    </script>
+</body>
+</html>

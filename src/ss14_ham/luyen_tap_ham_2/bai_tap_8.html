@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8 của luyện tập hàm 2</title>
+</head>
+<body>
+    <script>
+        let n = +prompt('Bạn muốn nhập bao nhiêu phần tử trong mảng')
+        let numb = []
+        for (let i = 0 ; i < n; i++){
+            numb[i] = +prompt("Nhập các phần tử")}
+        function mangTrongHam(a, b){
+                 a = 0
+                 b = n-1
+            while (a < b){
+                let c = numb[a];
+                numb[a]=numb[b];
+                numb[b]= c
+                a++
+                b--
+            }
+            return numb
+            }
+           document.write(mangTrongHam(numb))
+    </script>
+</body>
+</html>

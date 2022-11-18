@@ -5,8 +5,23 @@
     <title>Bài tập 3 của luyện tập hàm 2</title>
 </head>
 <body>
-    <script>
-
-    </script>
+<script>
+    // let numb = +prompt('Nhập số bất kì')
+    // function giaiThua(a){
+    //     if(a == 1)
+    //         return 1;
+    //     return a * giaiThua(a - 1);
+    // }
+    // document.write("Số bạn nhập có giai thừa là: "+giaiThua(numb))
+    let numb = +prompt('Nhập số bất kì')
+    function cach2(n) {
+        let result = 1
+        for(let i=1; i<=n; i++){
+             result = result * i
+        }
+        return result
+    }
+    document.write("Số bạn nhập có giai thừa là: " + cach2(numb))
+</script>
 </body>
 </html>

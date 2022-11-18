@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9 của luyện tập hàm 2</title>
+</head>
+<body>
+    <script>
+
+        let n = prompt('Bạn muốn nhập bao nhiêu kí tự trong mảng')
+        let arr = []
+            for (let i=0; i<n; i++){
+                arr[i]= prompt('Nhập kí tự vào mảng')
+            }
+        let character = prompt("Nhập kí tự bất kì")
+            function inputCharacter(char) {
+                  let  count = 0
+                for (let j = 0; j < n; j++) {
+                    if (char == arr[j]) {
+                        count++
+                    }
+                }
+                    if( count == 0 ){
+                        return -1
+                    }
+                    else {
+                        return count
+                    }
+
+            }
+            document.write(inputCharacter(character))
+    </script>
+</body>
+</html>
