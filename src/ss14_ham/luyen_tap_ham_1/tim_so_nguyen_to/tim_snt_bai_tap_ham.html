@@ -9,14 +9,13 @@
     <script>
             let inputNumb = +prompt("Nhập số cần tìm")
             let countSnt = 0
-            let a = 1
                 alert(isPrimeNumber(inputNumb) ? "Là số nguyên tố": "Không phải là số nguyên tố")
                 document.write("Những số thuộc số nguyên tố: " + "<br>")
-                while (countSnt<1000){
-                    if(isPrimeNumber(a)){
-                document.write(a + "<br>")
-                        countSnt++}
-                    a++
+                while (countSnt<10000){
+                    if (isPrimeNumber(countSnt)){
+                        document.write(countSnt + "<br>")
+                    }
+                    countSnt++
                 }
     </script>
 

@@ -5,10 +5,20 @@
     <title>Chỉ số BMI</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <
-        </tr>
-    </table>
+  <script>
+      let numb = +prompt('Nhập số bất kì')
+      let count = 0
+        for(let i = 1; i<numb; i++) {
+            if (numb % i == 0) {
+                count++
+            }
+        }
+            if (count == 2) {
+                alert('Là số nguyên tố')
+            } else {
+                alert('Không phải là snt')
+            }
+
+  </script>
 </body>
 </html>
