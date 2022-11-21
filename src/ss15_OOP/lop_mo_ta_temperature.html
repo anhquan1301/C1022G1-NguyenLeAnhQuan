@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp mô tả nhiệt độ</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(triSo) {
+            this.triSo = triSo;
+        }
+        cSangf(doF){
+            doF = this.triSo * 9/5 + 32;
+            return doF;
+        }
+        cSangKevin(doK){
+            doK = this.triSo + 273.15;
+            return doK;
+        }
+    }
+        // let temperatureOOP = new Temperature(prompt('Nhập nhiệt độ C'))
+    // if (temperatureOOP.triSo < (-273)){
+    //     document.write('Nhiệt độ không hợp lệ')
+    // }
+    // else {
+    //     document.write("Nhiệt độ C sang độ F là: " + temperatureOOP.cSangf() + "<br>")
+    //     document.write("Nhiệt độ C sang độ K là: " + temperatureOOP.cSangKevin())
+    // }
+    let doC;
+            do {
+              doC = prompt('Nhập nhiệt độ C');
+            }
+            while ( doC < (-273));
+            let temperatureOOP = new Temperature(doC);
+        document.write("Nhiệt độ C sang độ F là: " + temperatureOOP.cSangf() + "<br>");
+        document.write("Nhiệt độ C sang độ K là: " + temperatureOOP.cSangKevin());
+
+
+</script>
+</body>
+</html>

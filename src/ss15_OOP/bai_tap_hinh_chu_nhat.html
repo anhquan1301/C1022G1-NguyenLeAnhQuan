@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+    <script>
+        class Rectangle {
+            constructor(weight, height) {
+                this.weight = weight;
+                this.height = height;
+            }
+            Dientich(){
+                document.write("Diện tích hình chữ nhật là: " + this.weight * this.height + "<br>");
+        }
+            Chuvi(){
+                document.write("Chu vi hình chữ nhật là: " + (this.weight + this.height) * 2);
+            }
+            // canvas(){
+            //
+            // }
+        }
+        let HCN = new Rectangle(10, 20);
+            HCN.Dientich();
+            HCN.Chuvi();
+    </script>
+</body>
+</html>

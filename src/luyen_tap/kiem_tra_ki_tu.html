@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự</title>
+</head>
+<body>
+    <script>
+        let number = 0
+        let kiTu = prompt("Nhập chữ bất kì trong bảng chữ cái")
+        let result;
+            switch (kiTu) {
+                case 'o':
+                case 'u':
+                case 'i':
+                case 'a':
+                case 'e':
+                case 'O':
+                case 'U':
+                case 'I':
+                case 'A':
+                case 'E':
+                result = 'Chữ cái nguyên âm'
+                    break;
+                default:
+                        result = 'Chữ cái phụ âm'
+            }
+            alert(result)
+    </script>
+</body>
+</html>

@@ -6,23 +6,16 @@
 </head>
 <body>
 <script>
-    let a= prompt('Nhập vào các chuỗi ký tự')
+    let a = prompt('Nhập vào các chuỗi ký tự')
     let b = prompt('Nhập vào các chuỗi ký tự')
     let arr1 = a.split()
     let arr2 = b.split()
-    let flag = true;
     for (let i =0 ; i < arr1.length ;i++){
-        if (arr[i]==arr2[i]){
-            flag = true;
+        if (arr1[i]==arr2[i]){
+            document.write('chuỗi giống nhau')
         }else{
-            flag = false;
             document.write('Chuỗi không giống nhau')
-            break
         }
-    }
-    if(flag){
-        document.write('Chuỗi giống nhau' +
-            '+')
     }
 </script>
 </body>

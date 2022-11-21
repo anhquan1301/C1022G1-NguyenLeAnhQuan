@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập</title>
+</head>
+<body>
+    <script>
+        let luongHangThang = +prompt('Nhập số tiền lương hàng tháng')
+        let luongRong;
+        let thueCanhan;
+            if(luongHangThang<=7000000){
+                thueCanhan = luongHangThang*5/100
+                luongRong = luongHangThang - thueCanhan
+            }
+            else if (luongHangThang<=15000000){
+                thueCanhan = luongHangThang*10/100
+                luongRong = luongHangThang - thueCanhan
+            }
+            else {
+                thueCanhan = luongHangThang*15/100
+                luongRong = luongHangThang - thueCanhan
+            }
+            document.write("Số thuế mà nhân viên đó phải đóng là: " + thueCanhan + "<br>" + "Số lương mà nhân viên đó nhận được là: " + luongRong)
+    </script>
+</body>
+</html>
