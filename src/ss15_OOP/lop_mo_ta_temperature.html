@@ -29,7 +29,7 @@
     // }
     let doC;
             do {
-              doC = prompt('Nhập nhiệt độ C');
+              doC = +prompt('Nhập nhiệt độ C');
             }
             while ( doC < (-273));
             let temperatureOOP = new Temperature(doC);
