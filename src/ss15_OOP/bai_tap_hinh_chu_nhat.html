@@ -6,30 +6,28 @@
 </head>
 <body>
     <canvas id = "canvashcn" width="500" height="500"></canvas>
-    <script>
-        class Rectangle {
-            constructor(weight, height) {
-                this.weight = weight;
-                this.height = height;
+        <script>
+            class Rectangle {
+                constructor(weight, height) {
+                    this.weight = weight;
+                    this.height = height;
+                }
+                Dientich(){
+                    document.write("Diện tích hình chữ nhật là: " + this.weight * this.height + "<br>");
+                }
+                Chuvi(){
+                    document.write("Chu vi hình chữ nhật là: " + (this.weight + this.height) * 2);
+                }
             }
-            Dientich(){
-                document.write("Diện tích hình chữ nhật là: " + this.weight * this.height + "<br>");
-        }
-            Chuvi(){
-                document.write("Chu vi hình chữ nhật là: " + (this.weight + this.height) * 2);
-            }
-        }
-        let canvasObj = document.getElementById("canvashcn");
-        let ctx = canvasObj.getContext("2d");
-            ctx.rect(200,200,200,100);
-            ctx.stroke();
-            ctx.fillStyle = "pink";
-            ctx.fill();
-        let HCN = new Rectangle(200,100);
-        HCN.Dientich();
-        HCN.Chuvi();
-
-
-    </script>
+            let canvasObj = document.getElementById("canvashcn");
+            let ctx = canvasObj.getContext("2d");
+                ctx.rect(200,200,200,100);
+                ctx.stroke();
+                ctx.fillStyle = "pink";
+                ctx.fill();
+            let HCN = new Rectangle(200,100);
+                HCN.Dientich();
+                HCN.Chuvi();
+        </script>
 </body>
 </html>

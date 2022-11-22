@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và Eva</title>
+</head>
+<body>
+    <script>
+        class Apple {
+            constructor(weight) {
+                this.weight = weight;
+            }
+            isEmpty(){
+                if(this.weight > 0){
+                    return true;
+                }
+                else {
+                    return false;
+                }
+           }
+            decrease(){
+                this.weight--;
+            }
+        }
+        class Human{
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            getName(){
+                return this.name;}
+            getGender(){
+                return this.gender;
+            }
+            getWeight(){
+                return this.weight;
+            }
+            setName(name){
+                this.name = name;}
+            setGender(gender){
+                this.gender = gender;}
+            setWeight(weight){
+                this.weight = weight;
+            }
+            say(){
+                return "Hello"
+            }
+            eat(appleObj){
+                    this.eat(appleObj)
+                    this.weight += 1
+                    appleObj.decrease()
+            }
+        }
+
+    </script>
+</body>
+</html>
