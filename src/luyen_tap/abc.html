@@ -7,15 +7,24 @@
 <body>
 <div id="snto"></div>
 <script>
-    let num = +prompt("Nhập 1 số")
-    let total = 0
-    while( num != -1 ) {
-        num = +prompt("Nhập tiếp 1 số: ");
-        alert(num)
-        //phần code tính tổng
-        total += num
+    msg = 'codegym';
+    for(var x = 0; x < msg.length - 1; x++)
+    {
+        if(msg.length == 3)
+        {
+            for (var i = 2; i < 7; i++)
+            {
+                console.log(i);
+            }
+        }
+        else
+        {
+            for (var i = msg.length; i > (msg.length - 2); i--)
+            {
+                console.log(i);
+            }
+        }
     }
-        alert(total)
 </script>
 </body>
 </html>

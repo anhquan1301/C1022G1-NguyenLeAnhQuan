@@ -7,11 +7,11 @@
 <body>
     <script>
         class Apple {
-            constructor(weight) {
-                this.weight = weight;
+            constructor() {
+                this.weight = 10;
             }
             isEmpty(){
-                if(this.weight > 0){
+                if(this.weight <= 0){
                     return true;
                 }
                 else {
@@ -19,39 +19,67 @@
                 }
            }
             decrease(){
-                this.weight--;
+                if(this.isEmpty()){
+                    return "Hết táo rồi"
+                }
+                else {
+                    this.weight--;
+                }
             }
         }
-        class Human{
+        class Human {
             constructor(name, gender, weight) {
                 this.name = name;
                 this.gender = gender;
                 this.weight = weight;
             }
-            getName(){
-                return this.name;}
+            checkApple(apple){
+                 return apple.isEmpty()
+                    }
+            isMale(){
+                if(this.gender == true){
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
             getGender(){
-                return this.gender;
+                if(this.isMale()){
+                    return "Male";
+                }
+                else {
+                    return "Female";
+                }
             }
             getWeight(){
                 return this.weight;
             }
-            setName(name){
-                this.name = name;}
-            setGender(gender){
-                this.gender = gender;}
             setWeight(weight){
                 this.weight = weight;
             }
-            say(){
-                return "Hello"
+
+            say(talk){
+                return this.name + ": Hi bae"
             }
-            eat(appleObj){
-                    this.eat(appleObj)
-                    this.weight += 1
-                    appleObj.decrease()
+            eat(food){
+                if(this.getWeight()>0){
+                    this.weight ++
+                    food.decrease()
+                }
+                else {
+                    return 'Hết táo'
+                }
             }
         }
+        let adam = new Human('Adam', true, '65');
+        let eva = new Human('Eva', false, '55');
+        let appleFood = new Apple();
+            document.write(adam.say() + "<br>");
+            document.write(eva.say() + '<br>');
+            document.write('Adam ăn táo' + "<br>")
+            document.write(adam.eat(appleFood))
+
 
     </script>
 </body>
