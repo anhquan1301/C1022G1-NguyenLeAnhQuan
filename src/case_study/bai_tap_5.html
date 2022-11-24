@@ -7,12 +7,12 @@
 <body>
     <form action="">
         <ol>Menu
-            <li>Cafe: 15000</li>
-            <li>Cam vắt: 20000</li>
-            <li>Nước cà rốt: 20000</li>
-            <li>Nước cà chua: 20000</li>
-            <li>Nước lọc: 10000</li>
-            <li>Nước dừa: 25000</li>
+            <li>Cafe: 15000vnđ</li>
+            <li>Cam vắt: 20000vnđ</li>
+            <li>Nước cà rốt: 20000vnđ</li>
+            <li>Nước cà chua: 20000vnđ</li>
+            <li>Nước lọc: 10000vnđ</li>
+            <li>Nước dừa: 25000vnđ</li>
         </ol>
         <label for='drink'>Nhập số để gọi nước</label>
         <input id = 'drink' type="text">
@@ -26,21 +26,21 @@
                for(let i=0; i<numb.length; i++){
                     alert(soluong + " " + drink[numb[i]])
                }
-                    if(numb == 0){
-                            alert('Thoát gọi món')
-                        }
-                    else if(numb == 1){
-                       alert('Tổng thanh toán: ' + 15000 * soluong)
+                    if(numb == 1){
+                       alert('Tổng thanh toán: ' + 15000 * soluong +'vnđ')
                    }
                     else if(numb==2||numb==3||numb==4){
-                       alert('Tổng thanh toán: ' + 20000 * soluong)
+                       alert('Tổng thanh toán: ' + 20000 * soluong +'vnđ')
                    }
                     else if (numb==5){
-                        alert('Tổng thanh toán: ' + 10000 * soluong)
+                        alert('Tổng thanh toán: ' + 10000 * soluong +'vnđ')
                    }
-                    else {
-                        alert('Tổng thanh toán: ' + 25000 * soluong)
-                   }
+                    else if (numb==6) {
+                        alert('Tổng thanh toán: ' + 25000 * soluong +'vnđ')
+                    }
+                    else{
+                        alert('Thoát gọi món')
+                    }
            }
     </script>
 </body>
