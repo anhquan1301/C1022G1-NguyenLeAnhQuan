@@ -5,8 +5,43 @@
     <title>Bài tập 5 của mảng</title>
 </head>
 <body>
+    <form action="">
+        <ol>Menu
+            <li>Cafe: 15000</li>
+            <li>Cam vắt: 20000</li>
+            <li>Nước cà rốt: 20000</li>
+            <li>Nước cà chua: 20000</li>
+            <li>Nước lọc: 10000</li>
+            <li>Nước dừa: 25000</li>
+        </ol>
+        <label for='drink'>Nhập số để gọi nước</label>
+        <input id = 'drink' type="text">
+        <button type="button" onclick="menuDrink()">Click</button>
+    </form>
     <script>
-
+           function menuDrink() {
+               let soluong = prompt('nhập số lượng nước: ')
+               let numb = document.getElementById('drink').value;
+               let drink = ['','Cafe', 'Cam vắt', 'Nước cà rốt', 'Nước cà chua', 'Nước lọc', 'Nước dừa']
+               for(let i=0; i<numb.length; i++){
+                    alert(soluong + " " + drink[numb[i]])
+               }
+                    if(numb == 0){
+                            alert('Thoát gọi món')
+                        }
+                    else if(numb == 1){
+                       alert('Tổng thanh toán: ' + 15000 * soluong)
+                   }
+                    else if(numb==2||numb==3||numb==4){
+                       alert('Tổng thanh toán: ' + 20000 * soluong)
+                   }
+                    else if (numb==5){
+                        alert('Tổng thanh toán: ' + 10000 * soluong)
+                   }
+                    else {
+                        alert('Tổng thanh toán: ' + 25000 * soluong)
+                   }
+           }
     </script>
 </body>
 </html>
