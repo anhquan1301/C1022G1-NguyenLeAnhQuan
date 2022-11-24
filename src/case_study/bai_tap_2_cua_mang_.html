@@ -6,15 +6,21 @@
 </head>
 <body>
     <script>
-        let numb1 = new Array(5)
+        let numb3 = []
+        let check;
+        let numb1 = new Array(3)
             for (let i = 0; i<numb1.length; i++){
                 numb1[i] = +prompt('Nhập các phần tử vào mảng 1')
             }
-        let numb2 = new Array(7)
+        let numb2 = new Array(5)
             for (let j = 0; j<numb2.length; j++) {
                 numb2[j] = +prompt('Nhập các phần tử vào mảng 2')
+                check = numb1.indexOf(numb2[j])
+                if(check == -1){
+                    numb3.push(numb2[j])
+                }
             }
-
+        document.write(numb3)
     </script>
 </body>
 </html>

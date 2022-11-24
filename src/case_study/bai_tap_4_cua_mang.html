@@ -6,18 +6,21 @@
 </head>
 <body>
     <script>
-        let arr = +prompt('Bạn muốn nhập bao nhiêu số');
-        let input;
+        let input = prompt("Nhập số");
         let numb = [0,1,2,3,4,5,6,7,8,9];
-        let text = ['Không', 'Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chín']
+        let text = ['Không ', 'Một ', 'Hai ', 'Ba ', 'Bốn ', 'Năm ', 'Sáu ', 'Bảy ', 'Tám ', 'Chín '];
         let check;
-        for (let i=0; i<arr; i++){
-                 input = +prompt('Nhập số')
-                 check = numb.indexOf(input)
+        for (let i=0; i<=input.length; i++){
+                 check = numb.indexOf(parseInt(input[i]));
             if(check != -1){
-                document.write(text[check])
+                document.write(text[check]);
             }
         }
+        // let arr =  prompt('Nhập số bất kì');
+        // let text = ['Không', 'Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chín'];
+        //    for (let i=0; i<arr.length; i++){
+        //        document.write(text[arr[i]])
+        //    }
     </script>
 </body>
 </html>
