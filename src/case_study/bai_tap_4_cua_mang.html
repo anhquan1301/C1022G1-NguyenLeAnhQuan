@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr = +prompt('Bạn muốn nhập bao nhiêu số');
+        let input;
+        let numb = [0,1,2,3,4,5,6,7,8,9];
+        let text = ['Không', 'Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chín']
+        let check;
+        for (let i=0; i<arr; i++){
+                 input = +prompt('Nhập số')
+                 check = numb.indexOf(input)
+            if(check != -1){
+                document.write(text[check])
+            }
+        }
+    </script>
+</body>
+</html>
