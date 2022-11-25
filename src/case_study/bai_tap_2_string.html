@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2 của string</title>
+</head>
+<body>
+    <script>
+        let text = prompt('Nhập chuỗi bất kì')
+        let arr = text.split('');
+        for (let i=0; i<text.length; i++){
+            for (let j=1; j<text.length;j++){
+                if (arr[i] == arr[j] && i != j){
+                    arr.splice(j, 1)
+                }
+            }
+        }
+        document.write('số lượng kí tự khác nhau: ' + arr.length)
+    </script>
+</body>
+</html>

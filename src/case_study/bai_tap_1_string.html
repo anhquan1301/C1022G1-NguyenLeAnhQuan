@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 1 của string</title>
+</head>
+<body>
+    <script>
+        function textCheck(){
+            let max= ''
+            let result='';
+            let text = prompt('Nhập tên bất kì')
+            let str = text.split(' ')
+            let textArr = []
+            let newText = ''
+            for (let i=0; i<str.length; i++) {
+                if (str[i] != '') {
+                    textArr.push(str[i])
+                }
+            }
+            for (let j=0; j<textArr.length; j++){
+                newText += textArr[j][0].toUpperCase() + textArr[j].slice(1).toLowerCase() + " "
+            }
+            let text2 = newText.split(' ')
+            for (let k =0; k<text2.length; k++){
+                if (k==0) {
+                    max = text2[k].length;
+                    result=text2[k]
+                }
+                if(text2[k].length>max){
+                    max = text2[k].length;
+                    result=text2[k]
+                }
+            }
+            document.write(newText + '<br>')
+            document.write('Chữ dài nhất: '+ result)
+        }
+        textCheck()
+
+    </script>
+</body>
+</html>
