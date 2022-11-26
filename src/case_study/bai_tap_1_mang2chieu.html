@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1 Mảng 2 chiều</title>
+</head>
+<body>
+    <script>
+        // let sum = 0
+        // let arr = [
+        //     [1,7,5,15],
+        //     [4,5,8,5],
+        //     [5,18,20,49],
+        //     [13,1,19,67]
+        // ]
+        // for (let i=0; i<arr.length; i++){
+        //     for (let j=0; j<arr.length; j++){
+        //         if(arr[i][j] % 2 == 0){
+        //             sum += arr[i][j]
+        //             console.log(sum)
+        //         }
+        //     }
+        // }
+        let arr = []
+        function mang2Chieu(mang){
+            let sum = 0
+            let doDaimang1 = +prompt('Nhập độ dài mảng 1')
+            for (let i=0; i<doDaimang1; i++){
+                let doDaimang2 = +prompt('Nhập độ dài mảng 2')
+                let arr2 = []
+                mang.push(arr2)
+                for (let j=0; j<doDaimang2; j++){
+                    arr2[j] = +prompt('Nhập các phần tử trong mảng')
+                }
+            }
+            console.log(mang)
+            for (let i=0; i<mang.length; i++){
+                for (let j=0; j<mang.length; j++){
+                    if(mang[i][j] % 2 == 0){
+                        sum += mang[i][j]
+                    }
+                }
+            }
+            document.write('Tổng: '+sum)
+        }
+            mang2Chieu(arr)
+
+    </script>
+</body>
+</html>
+
