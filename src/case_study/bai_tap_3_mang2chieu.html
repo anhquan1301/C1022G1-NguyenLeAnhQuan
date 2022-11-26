@@ -9,7 +9,7 @@
         function max(n){
             let max = n[0][0]
             for(let i=0; i < n.length; i++){
-                    for (let j=0; j<n.length; j++){
+                    for (let j=0; j<n[i].length; j++){
                         if(n[i][j] > max){
                             max = n[i][j]
                         }
@@ -18,9 +18,10 @@
             return max
         }
         function min(m){
+            
             let min = m[0][0]
             for (let i=0; i < m.length; i++){
-                for (let j=0; j < m.length; j++){
+                for (let j=0; j<m[i].length; j++){
                     if(m[i][j] < min){
                         min = m[i][j]
                     }
