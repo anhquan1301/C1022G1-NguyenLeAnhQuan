@@ -8,7 +8,51 @@
 <div id="list"></div>
 <div id="result"></div>
 <script>
-
+    function textCheck(){
+        let max= ''
+        let result='';
+        let text = prompt('Nhập tên bất kì')
+        let str = text.split(' ')
+        let textArr = []
+        let newText = ''
+        for (let i=0; i<str.length; i++) {
+            if (str[i] != '') {
+                textArr.push(str[i])
+            }
+        }
+        for (let j=0; j<textArr.length; j++){
+            newText += textArr[j][0].toUpperCase() + textArr[j].slice(1).toLowerCase() + " "
+        }
+        // for (let k=0; k<newText.length; k++){
+        //     max = chuDainhat(newText[k])
+        // }
+        result = newText.split(' ')
+        document.write(newText + '<br>')
+        document.write('Chữ dài nhất: '+ chuDainhat(result))
+        // let text2 = newText.split(' ')
+        // for (let k =0; k<text2.length; k++){
+        //     if (k==0) {
+        //         max = text2[k].length;
+        //         result=text2[k]
+        //     }
+        //     if(text2[k].length>max){
+        //         max = text2[k].length;
+        //         result=text2[k]
+        //     }
+        // }
+    }
+    function chuDainhat(arr){
+        let max = arr[0].length
+        let result = arr[0]
+        for(let i=0; i<arr.length; i++){
+            if (arr[i].length>max){
+                max=arr[i].length
+                result = arr[i]
+            }
+        }
+        return result
+    }
+    textCheck()
 </script>
 </body>
 </html>

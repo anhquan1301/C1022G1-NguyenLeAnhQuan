@@ -9,16 +9,14 @@
 <body>
     <script>
         let a1=0;
-        let a2=1;
+        let a2=0;
         let a3=1;
-        let result=0
         for(let i = 1; i<=20; i++){
-            result = result + "<br>" + a3 
-            a3=a1+a2
-            a1=a2
-            a2=a3
+          a1 = a2;
+          a2 = a1+a3;
+          a3 = a1
+            document.write(a3 + '<br>');
         }
-        document.write(result);
     </script>
 </body>
 </html>
