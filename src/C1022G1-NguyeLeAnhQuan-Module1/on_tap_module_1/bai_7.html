@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        let numbA = +prompt('Nhập vào 1 số')
+        let numbB = +prompt('Nhập vào 1 số')
+        let result
+            if (numbA > numbB){
+                result = numbA + ' > ' + numbB
+            }
+            else if(numbA<numbB){
+                result = numbA + ' < ' + numbB
+            }
+            else if(numbA == numbB) {
+                result = numbA + ' = ' + numbB
+            }
+            else {
+                result = 'Nhập số để so sánh'
+            }
+            document.write(result)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 Test</title>
+</head>
+<body>
+<script>
+    let numb = prompt('Nhập số')
+
+    function findMaxNumber(n) {
+        let arr = n.split('')
+        if (n >= 1000 && n < 9999) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] < arr[i + 1]) {
+                    arr.splice(i, 1)
+                     arr.join('')
+                }
+            else {
+                    arr.splice(arr.length - 1, 1)
+                    return  arr.join('')
+
+                }
+            }
+        } else {
+            return -1
+        }
+    }
+
+    document.write(findMaxNumber(numb))
+</script>
+</body>
+</html>

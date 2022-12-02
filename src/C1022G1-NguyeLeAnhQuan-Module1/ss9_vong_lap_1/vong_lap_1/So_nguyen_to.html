@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        // let countCheck=0;
+        let i = 2;
+        // while(i >= 2 && countCheck < 20){
+        //     for( let j =1; j <= i; j++ ) {
+        //         if( i % j === 0 )
+        //             count++;
+        //     } if (count === 2) {
+        //         document.write(i + "<br>");
+        //         countCheck++;
+        //     }
+        //     count = 0;
+        //     i++;
+        // }
+        for (let j=0; j<20;){
+            for (let k=1; k<=i;k++){
+                if (i % k==0){
+                    count++
+                }
+            }
+            if (count==2){
+                document.write(i + '<br>')
+                j++
+            }
+            i++
+            count = 0
+        }
+    </script>
+</body>
+</html>

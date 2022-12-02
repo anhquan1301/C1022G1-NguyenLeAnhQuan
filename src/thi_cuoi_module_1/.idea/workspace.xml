@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fcbb8180-dee8-4b6a-aacb-c860a4b61134" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/Phan_2/Bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/Phan_2/bai_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/Phan_3/bai_11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/Phan_3/bai_12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/Phan_3/bai_13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_1_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_2_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_3_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/on_tap_module_1/bai_8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/case_study/bai_tap_2_mang2chieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/case_study/bai_tap_2_mang2chieu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/case_study/bai_tap_3_cua_string.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/case_study/bai_tap_3_cua_string.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/luyen_tap/abc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/luyen_tap/abc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/luyen_tap/chuyen_doi_nhiet_do.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/luyen_tap/chuyen_doi_nhiet_do.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/ss9_vong_lap_1/vong_lap_1/So_nguyen_to.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/ss9_vong_lap_1/vong_lap_1/So_nguyen_to.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2IFR95LWw6NybdGFvLJ596Te351" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcbb8180-dee8-4b6a-aacb-c860a4b61134" name="Default Changelist" comment="" />
+      <created>1669775189326</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669775189326</updated>
+      <workItem from="1669775190491" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="501" y="181" key="FileChooserDialogImpl" timestamp="1669775209255">
+      <screen x="0" y="0" width="1440" height="852" />
+    </state>
+    <state x="501" y="181" key="FileChooserDialogImpl/0.0.1440.852@0.0.1440.852" timestamp="1669775209255" />
+  </component>
+</project>

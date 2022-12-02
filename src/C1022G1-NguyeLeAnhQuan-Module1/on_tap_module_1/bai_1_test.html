@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 test</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Độ dài')
+    let numb = []
+    let result;
+    for (let i = 0; i < n; i++) {
+        numb[i] = +prompt('Nhập PT')
+    }
+    let a = numb[1] - numb[0]
+    for (let j = 1; j < n; j++) {
+        result = (numb[j] - numb[j - 1] === a && numb[j] > numb[j - 1] ? 'OK' : 'No')
+    }
+    document.write(numb + '<br>')
+    document.write(result)
+
+</script>
+</body>
+</html>

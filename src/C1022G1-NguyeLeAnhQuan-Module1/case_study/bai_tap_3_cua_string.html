@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3 string</title>
+</head>
+<body>
+<script>
+    let count = 0
+    let text1 = prompt('Nhập chuỗi 1')
+    let text2 = prompt('Nhập chuỗi 2')
+    let arr1 = text1.split('')
+    let arr2 = text2.split('')
+    for (let i = 0; i < text1.length; i++) {
+        if (arr1.indexOf(arr2[i]) != -1) {
+            count++
+            arr1.splice(arr1.indexOf(arr2[i]), 1)
+        }
+    }
+    document.write('Số lượng kí tự giống nhau của 2 chuỗi: ' + count)
+</script>
+</body>
+</html>

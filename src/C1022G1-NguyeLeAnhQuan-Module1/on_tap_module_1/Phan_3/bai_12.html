@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+    <script>
+        let n = +prompt('Nhập độ dài')
+        let numb = []
+        let arr = []
+            for (let i=0; i<n; i++){
+                numb[i] = +prompt('Nhập phần tử')
+                if(sNt(numb[i])){
+                    arr.push(numb[i])
+                }
+            }
+            document.write(arr)
+        function sNt(n) {
+                let count = 0
+                for (let i=1; i<=n; i++){
+                    if(n%i==0){
+                        count++
+                    }
+                }
+                if (count==2){
+                    return true
+                }
+                else {
+                    return false
+                }
+        }
+    </script>
+</body>
+</html>

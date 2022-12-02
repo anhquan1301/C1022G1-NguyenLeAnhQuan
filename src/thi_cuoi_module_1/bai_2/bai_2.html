@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let numb = +prompt('Nhập số bất kì');
+    function soHoanHao(numb1) {
+        let sum = 0;
+        for (let i = 1; i < numb1; i++) {
+            if (numb1 % i === 0) {
+                sum += i;
+            }
+        }
+        if (numb1 === sum) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    document.write('Số nhập vào có phải là số hoàn hảo không? ' + soHoanHao(numb));
+</script>
+</body>
+</html>

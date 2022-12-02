@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let inputStr = prompt('Nhập chuỗi')
+        let result
+            for (let i=0; i<=inputStr.length/2; i++){
+                if(inputStr[i] !== inputStr[inputStr.length - 1 - i]){
+                    result = 'Xâu không đối xứng'
+                    break
+                 }
+                else {
+                    result = 'Xâu đối xứng'
+                }
+            }
+                document.write(result)
+    </script>
+</body>
+</html>

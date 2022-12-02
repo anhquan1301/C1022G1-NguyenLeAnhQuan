@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let month = prompt('Nhập số tháng');
+    let year = prompt('Nhập số năm');
+
+    function thangNam(soThang, soNam) {
+        switch (soThang) {
+            case '01':
+            case '03':
+            case '05':
+            case '07':
+            case '08':
+            case 10:
+            case 12:
+                document.write('Có 31 ngày' + '<br>');
+                break
+            case '02':
+                document.write('Có 28 hoặc 29 ngày' + '<br>');
+                break
+            case '04':
+            case '06':
+            case '09':
+            case 11:
+                document.write('Có 30 ngày' + '<br>');
+                break
+            default:
+                document.write('Nhâp sai số tháng' + '<br>');
+        }
+        if (soNam.length != 4) {
+            document.write('Nhập lại số năm');
+        } else {
+            if (soNam % 4 == 0) {
+                document.write('Năm nhuận');
+            } else {
+                document.write('Năm không nhuận');
+            }
+        }
+    }
+    thangNam(month, year);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let doDaimang = +prompt('Nhập độ dài mảng');
+    let arr = [];
+    let count = 0;
+    let sum = 0;
+    let avg;
+    if (doDaimang > 50) {
+        document.write('Nhập lại dưới 50 số' + '<br>');
+    } else {
+        for (let i = 0; i < doDaimang; i++) {
+            arr[i] = +prompt('Nhập phần tử vào mảng');
+        }
+        for (let j = 0; j < doDaimang; j++) {
+            if (arr[j] % 3 === 0) {
+                sum += arr[j];
+                count++;
+            }
+        }
+        avg = sum / count;
+        document.write('Trung bình công của các số chia hết cho 3: ' + avg);
+    }
+
+</script>
+</body>
+</html>
