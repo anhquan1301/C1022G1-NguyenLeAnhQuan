@@ -1,3 +1,5 @@
+package ss2.baitap;
+
 public class HienThiSoNguyenTo {
     public static void main(String[] args) {
         System.out.println("Những số nguyên tố dưới 100");

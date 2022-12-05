@@ -1,3 +1,5 @@
+package ss2.baitap;
+
 import com.sun.corba.se.spi.orbutil.fsm.Input;
 
 import java.sql.SQLOutput;

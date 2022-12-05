@@ -1,3 +1,5 @@
+package ss1.baitap;
+
 import java.util.Scanner;
 
 public class NhapSoDoiThanhChu {
