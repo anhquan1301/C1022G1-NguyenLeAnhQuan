@@ -37,9 +37,9 @@ public class Point3D extends Point2D{
     public String toString() {
         return "Point3D{" +
                 "x=" + getX() +
-                "y=" + getY() +
-                "z=" + z +
-                "Mảng" + Arrays.toString(getXYZ()) +
+                ", y=" + getY() +
+                ", z=" + z +
+                ", arr" + Arrays.toString(getXYZ()) +
                 '}';
     }
 }

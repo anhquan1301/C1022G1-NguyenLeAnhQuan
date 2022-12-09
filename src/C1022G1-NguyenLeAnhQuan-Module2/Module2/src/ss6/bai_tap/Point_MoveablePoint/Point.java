@@ -1,15 +1,15 @@
-package ss6.bai_tap.point2D_point3D;
+package ss6.bai_tap.Point_MoveablePoint;
 
 import java.util.Arrays;
 
-public class Point2D {
+public class Point {
     private float x;
     private float y;
 
-    public Point2D() {
+    public Point() {
     }
 
-    public Point2D(float x, float y) {
+    public Point(float x, float y) {
         this.x = x;
         this.y = y;
     }
@@ -29,19 +29,18 @@ public class Point2D {
     public void setY(float y) {
         this.y = y;
     }
-
     public void setXY(float x, float y){
         this.x = x;
         this.y = y;
     }
     public float [] getXY(){
-        float []arr = {this.x,this.y};
+        float arr[] = {this.x, this.y};
         return arr;
     }
 
     @Override
     public String toString() {
-        return "point2D{" +
+        return "Point{" +
                 "x=" + x +
                 ", y=" + y +
                 ", arr" + Arrays.toString(getXY()) +

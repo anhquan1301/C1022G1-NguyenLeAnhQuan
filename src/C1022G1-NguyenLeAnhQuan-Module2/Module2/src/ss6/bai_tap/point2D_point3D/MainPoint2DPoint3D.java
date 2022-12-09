@@ -1,5 +1,7 @@
 package ss6.bai_tap.point2D_point3D;
 
+import java.util.Arrays;
+
 public class MainPoint2DPoint3D {
     public static void main(String[] args) {
         Point2D p2 = new Point2D(3,5);
