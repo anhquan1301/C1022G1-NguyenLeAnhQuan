@@ -1,6 +1,6 @@
 package ss7.bai_tap.Interface_colorable;
 
-public class Hinh implements Colorable{
+public abstract class Hinh implements IColorable {
     private String color;
     private boolean filled;
 
@@ -27,6 +27,8 @@ public class Hinh implements Colorable{
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
+
+    public abstract void getArea();
 
     @Override
     public String toString() {

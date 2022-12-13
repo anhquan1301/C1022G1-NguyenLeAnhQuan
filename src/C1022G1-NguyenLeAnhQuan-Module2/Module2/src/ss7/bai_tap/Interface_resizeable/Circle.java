@@ -1,6 +1,6 @@
 package ss7.bai_tap.Interface_resizeable;
 
-public class Circle extends Shape implements Resizeable {
+public class Circle extends Shape {
     private double radius;
 
     public Circle() {
@@ -12,7 +12,9 @@ public class Circle extends Shape implements Resizeable {
 
     public double getRadius() {
         return radius;
-    }
+    }\
+
+
 
     public void setRadius(double radius) {
         this.radius = radius;

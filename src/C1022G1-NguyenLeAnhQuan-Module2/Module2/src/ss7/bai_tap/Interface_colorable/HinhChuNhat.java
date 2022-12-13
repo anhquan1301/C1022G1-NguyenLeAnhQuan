@@ -1,6 +1,6 @@
 package ss7.bai_tap.Interface_colorable;
 
-public class HinhChuNhat extends Hinh implements Colorable {
+public class HinhChuNhat extends Hinh {
     double chieuRong, chieuCao;
 
     public HinhChuNhat() {
@@ -35,15 +35,6 @@ public class HinhChuNhat extends Hinh implements Colorable {
 
     public double getDienTich(){
         return chieuCao*chieuRong;
-    }
-
-    @Override
-    public void howToColor() {
-        if(super.isFilled()){
-            System.out.println("Color all four sides " + getColor());
-        }else {
-            System.out.println("Not fill color");
-        }
     }
 
     @Override

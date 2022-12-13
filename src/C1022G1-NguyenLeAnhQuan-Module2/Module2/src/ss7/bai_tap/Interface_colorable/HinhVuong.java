@@ -1,6 +1,6 @@
 package ss7.bai_tap.Interface_colorable;
 
-public class HinhVuong extends Hinh implements Colorable{
+public class HinhVuong extends Hinh{
     double canh;
 
 

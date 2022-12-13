@@ -11,9 +11,5 @@ public class Test {
         System.out.println(Arrays.toString(mangHinh));
         System.out.println("Hình vuông");
         mangHinh[0].howToColor();
-        System.out.println("Hình chữ nhật");
-        mangHinh[1].howToColor();
-        System.out.println("Hình tròn");
-        mangHinh[2].howToColor();
     }
 }
