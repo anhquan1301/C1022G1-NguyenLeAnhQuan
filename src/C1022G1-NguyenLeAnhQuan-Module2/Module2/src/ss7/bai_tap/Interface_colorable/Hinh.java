@@ -28,7 +28,6 @@ public abstract class Hinh implements IColorable {
         this.filled = filled;
     }
 
-    public abstract void getArea();
 
     @Override
     public String toString() {

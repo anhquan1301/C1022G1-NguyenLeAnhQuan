@@ -6,7 +6,7 @@ public class TennisGame {
     public static final int THIRTY = 2;
     public static final int FORTY = 3;
 
-    public static String getScore(String player1Name, String player2Name, int firstScore, int secondScore) {
+    public static String getScore(String playerFirstName, String playerSecondName, int firstScore, int secondScore) {
         String score = "";
         int tempScore = 0;
         if (firstScore == secondScore) {
@@ -29,12 +29,12 @@ public class TennisGame {
 
             }
         } else if (firstScore >= 4 || secondScore >= 4) {
-            int minusResult = firstScore - secondScore;
-            if (minusResult == 1) {
+            int menuResult = firstScore - secondScore;
+            if (menuResult == 1) {
                 score = "Advantage player1";
-            } else if (minusResult == -1) {
+            } else if (menuResult == -1) {
                 score = "Advantage player2";
-            } else if (minusResult >= 2) {
+            } else if (menuResult >= 2) {
                 score = "Win for player1";
             } else {
                 score = "Win for player2";
