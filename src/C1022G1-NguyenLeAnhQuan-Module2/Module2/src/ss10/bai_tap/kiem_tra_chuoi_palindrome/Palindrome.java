@@ -18,22 +18,5 @@ public class Palindrome {
             stack1.push(stack.pop());
         }
         System.out.println(stack1.equals(queue) ? "Chuỗi Palindrome" : "Không phải chuỗi Palindrome");
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Nhập chuỗi bất kỳ: ");
-//        String str = sc.nextLine();
-//        Stack<String> stack = new Stack<>();
-//        Queue<String> queue = new LinkedList<>();
-//        String strStrack = null;
-//        String strQueue = null;
-//        for (int i = 0; i <str.length() ; i++) {
-//            stack.push(str.charAt(i)+"");
-//            queue.offer(str.charAt(i)+"");
-//        }
-//        for (int j = 0; j <str.length() ; j++) {
-//            strStrack = stack.pop();
-//            strQueue = queue.poll();
-//        }
-//        System.out.println(strQueue.equals(strStrack) ? "Chuỗi Palindrome"  : "Không phải chuỗi Palindrome");
-//
     }
 }
