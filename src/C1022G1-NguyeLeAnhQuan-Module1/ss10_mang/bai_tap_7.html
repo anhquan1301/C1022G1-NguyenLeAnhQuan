@@ -6,21 +6,24 @@
 </head>
 <body>
     <script>
-        let numb = new Array(10);
+        let numb = new Array(5);
         for (let i=0; i< numb.length; i++){
             numb[i] = +prompt("Nhập 10 phần tử của mảng")
         }
         let numbV = +prompt("Nhập số nguyên V")
         for (let j = 0; j < numb.length; j++) {
             if (numb[j] === numbV) {
-                for (let k = j; k < numb.length - 1; k++){
-                    numb[k] = numb[k + 1];
-                }
-                numb[numb.length - 1] = 0
-                j--
+                document.write("V có")
+            //     for (let k = j; k < numb.length - 1; k++){
+            //         numb[k] = numb[k + 1];
+            //     }
+            //     numb[numb.length - 1] = 0
+            //     j--
+            // }else{
+            //     document.write("V kh có")
             }
         }
-        document.write(numb)
+        // document.write(numb)
     </script>
 </body>
 </html>

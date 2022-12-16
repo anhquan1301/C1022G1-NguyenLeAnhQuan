@@ -16,7 +16,7 @@ public class GiaiThuat {
         }
         for (int i = 0; i <arrLength; i++) {
             max = arr[0];
-            if (max<arr[i]);
+            if (max>arr[i]);
             max = arr[i];
         }
         System.out.println(Arrays.toString(arr));

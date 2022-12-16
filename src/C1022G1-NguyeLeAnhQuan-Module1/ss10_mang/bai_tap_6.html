@@ -6,22 +6,41 @@
 </head>
 <body>
     <script>
-        let numb = new Array(10);
-        // let flag = true;
-            for (let i=0; i< numb.length; i++){
-                 numb[i] = +prompt("Nhập 10 phần tử của mảng")
-            }
-        let numbV = +prompt("Nhập số nguyên V")
-        let check = numb.indexOf(numbV)
+        // let numb = new Array(10);
+        // // let flag = true;
+        //     for (let i=0; i< numb.length; i++){
+        //          numb[i] = +prompt("Nhập 10 phần tử của mảng")
+        //     }
+        // let numbV = +prompt("Nhập số nguyên V")
+        // let check = numb.indexOf(numbV)
 
-        // document.write(check == flag ? "V is in the array" : "V is not in the array")
-            if (check != -1){
-                document.write("V is in the array")
+        // // document.write(check == flag ? "V is in the array" : "V is not in the array")
+        //     if (check != -1){
+        //         document.write("V is in the array")
+        //     }
+        //     else
+        //     {
+        //         document.write("V isn't in the array")
+        //     }
+
+        let numb = +prompt("Nhập độ dài")
+        let arr = []
+        let flag = false;
+        for(let i=0; i<numb;i++){
+            arr[i] = +prompt("Nhập các phần tử ")
+        }
+        let numbV = +prompt("Nhập số V")
+        for(let i=0; i<arr.length;i++){
+            if(arr[i]==numbV){
+                flag = true;
             }
-            else
-            {
-                document.write("V isn't in the array")
-            }
+        }
+        if(flag){
+            document.write("V có")
+        }
+        else{
+            document.write("V không")
+        }
 
     </script>
 </body>
