@@ -17,8 +17,8 @@ public class ProductController {
         System.out.println("3. Xóa sản phẩm");
         System.out.println("4. Hiển thị danh sách sản phẩm");
         System.out.println("5. Tìm kiếm sản phẩm theo tên");
-        System.out.println("6. Sắp xếp sản phẩm tăng dần");
-        System.out.println("7. Sắp xếp sản phẩm giảm dần");
+        System.out.println("6. Sắp xếp sản phẩm giảm dần");
+        System.out.println("7. Sắp xếp sản phẩm tăng dần");
         System.out.println("8. Thoát");
         System.out.println("Chọn số để thực hiện các bước trên");
         do {
@@ -46,7 +46,6 @@ public class ProductController {
                         newId.setPrice(priceNew);
                         productService.updateProduct(newId);
                     }
-
                     break;
                 case 3:
                     System.out.print("Nhập id sản phẩm: ");
