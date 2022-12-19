@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class ProductRepository implements IProductRepository{
- public static List<Product> productList = new ArrayList<>();
+ private static List<Product> productList = new ArrayList<>();
 
    Product product1 = new Product(1, "IphoneX", 5000000);
    Product product3 = new Product(3, "Iphone12", 12000000);
@@ -53,7 +53,7 @@ public class ProductRepository implements IProductRepository{
     public void searchProduct(String name) {
        for (Product product : productList) {
           if(product.getName().equals(name)){
-             System.out.println(product);
+             System.out.println("Thông tin sản phầm: " + product);
           }
        }
     }
@@ -69,3 +69,4 @@ public class ProductRepository implements IProductRepository{
       Collections.reverse(productList);
     }
 }
+

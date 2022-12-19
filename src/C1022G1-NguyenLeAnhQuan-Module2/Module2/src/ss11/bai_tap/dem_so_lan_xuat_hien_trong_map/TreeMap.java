@@ -11,6 +11,7 @@ public class TreeMap {
         String str = scanner.nextLine().toUpperCase();
         String arrStr [] = str.split(" ");
         Map<String,Integer> myMap = new java.util.TreeMap<>();
+
         for (int i = 0; i <arrStr.length ; i++) {
             int count =0;
             for (int j = 0; j <arrStr.length ; j++) {

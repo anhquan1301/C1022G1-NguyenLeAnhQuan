@@ -1,6 +1,6 @@
 package ss11.bai_tap.mo_hinh_MVC.model.model;
 
-public class Product implements Comparable<Product> {
+public class Product implements Comparable<Product>{
     private int id;
     private String name;
     private int price;
