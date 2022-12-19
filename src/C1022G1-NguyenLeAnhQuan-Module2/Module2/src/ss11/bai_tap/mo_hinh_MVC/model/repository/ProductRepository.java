@@ -32,10 +32,22 @@ public class ProductRepository implements IProductRepository{
     }
 
     @Override
-    public void updateProduct(int id, Product product) {
-         for (int i=0; i<productList.size();i++){
+    public Product findById(int id) {
+        for (int i = 0; i <productList.size() ; i++) {
             if(productList.get(i).getId()==id){
+                return productList.get(i);
+            }
+        }
+        return null;
+    }
+
+
+    @Override
+    public void updateProduct( Product product) {
+         for (int i=0; i<productList.size();i++){
+            if(productList.get(i).getId()==product.getId()){
                productList.set(productList.indexOf(productList.get(i)), product);
+               break;
             }
          }
     }
@@ -52,7 +64,7 @@ public class ProductRepository implements IProductRepository{
     @Override
     public void searchProduct(String name) {
        for (Product product : productList) {
-          if(product.getName().equals(name)){
+          if(product.getName().contains(name)){
              System.out.println("Thông tin sản phầm: " + product);
           }
        }

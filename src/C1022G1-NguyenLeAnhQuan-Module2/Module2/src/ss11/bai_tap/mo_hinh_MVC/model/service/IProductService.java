@@ -7,7 +7,9 @@ public interface IProductService {
 
     void displayProduct();
 
-    void updateProduct(int id, Product product);
+    Product findById(int id);
+
+    void updateProduct( Product product);
 
     void removeProduct(int id);
 

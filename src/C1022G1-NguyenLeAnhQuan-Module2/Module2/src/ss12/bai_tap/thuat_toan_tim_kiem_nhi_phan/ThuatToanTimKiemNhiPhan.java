@@ -5,17 +5,15 @@ import java.util.Scanner;
 
 public class ThuatToanTimKiemNhiPhan {
 
-    public static int binarySearch(int[] array, int value){
-        int rigth = array.length-1;
-        int left =0;
+    public static int binarySearch(int[] array, int value, int rigth, int left){
         int middle = (left+rigth)/2;
-        while (left<rigth){
+         if (left<=rigth){
             if (array[middle]==value){
                 return middle;
             }else if (array[middle]>value){
-                return rigth = middle -1;
+                return binarySearch(array, value,middle-1 , left);
             }else{
-                return left = middle +1;
+                return binarySearch(array, value, rigth, middle+1);
             }
         }
         return -1;
@@ -33,6 +31,6 @@ public class ThuatToanTimKiemNhiPhan {
         System.out.print("Nhập số cần tìm trong mảng: ");
         int numb = Integer.parseInt(scanner.nextLine());
         Arrays.sort(arr);
-        System.out.println("Thứ tự của số cần tìm trong mảng " + binarySearch(arr, numb));
+        System.out.println("Thứ tự của số cần tìm trong mảng " + binarySearch(arr,numb,arr.length-1,0));
     }
 }

@@ -34,28 +34,32 @@ public class ProductController {
                     productService.addProduct(new Product(id, name, price));
                     break;
                 case 2:
-                    System.out.print("Nhập id sản phẩm cấn sửa: ");
-                    int fixId = Integer.parseInt(scanner.nextLine());
-                    System.out.print("Nhập id mới của sản phẩm: ");
-                    id = Integer.parseInt(scanner.nextLine());
-                    System.out.print("Nhập tên mới của sản phẩm: ");
-                    name = scanner.nextLine();
-                    System.out.print("Nhập giá mới của sản phẩm: ");
-                    price = Integer.parseInt(scanner.nextLine());
-                    productService.updateProduct(fixId, new Product(id, name, price));
+                    System.out.print("Nhập id cần chỉnh sửa thông tin: ");
+                    int idFixed = Integer.parseInt(scanner.nextLine());
+                    Product newId = productService.findById(idFixed);
+                    if(newId != null){
+                        System.out.print("Nhập tên mới của sản phẩm: ");
+                        String nameNew = scanner.nextLine();
+                        System.out.print("Nhập giá mới của sản phẩm: ");
+                        int priceNew = Integer.parseInt(scanner.nextLine());
+                        newId.setName(nameNew);
+                        newId.setPrice(priceNew);
+                        productService.updateProduct(newId);
+                    }
+
                     break;
                 case 3:
                     System.out.print("Nhập id sản phẩm: ");
-                    id = Integer.parseInt(scanner.nextLine());
-                    productService.removeProduct(id);
+                    int id1 = Integer.parseInt(scanner.nextLine());
+                    productService.removeProduct(id1);
                     break;
                 case 4:
                     productService.displayProduct();
                     break;
                 case 5:
                     System.out.println("Nhập tên sản phẩm: ");
-                    name = scanner.nextLine();
-                    productService.searchProduct(name);
+                    String nameProduct = scanner.nextLine();
+                    productService.searchProduct(nameProduct);
                     break;
                 case 6:
                     productService.sortAscending();
@@ -66,6 +70,8 @@ public class ProductController {
                 case 8:
                     System.exit(0);
                     break;
+                default:
+                    System.err.println("Nhập lại lựa chọn");
             }
         }while (true);
     }

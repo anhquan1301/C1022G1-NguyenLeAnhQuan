@@ -18,9 +18,15 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public void updateProduct(int id, Product product) {
-        repository.updateProduct(id, product);
+    public Product findById(int id) {
+        return repository.findById(id);
     }
+
+    @Override
+    public void updateProduct(Product product) {
+        repository.updateProduct(product);
+    }
+
 
     @Override
     public void removeProduct(int id) {
