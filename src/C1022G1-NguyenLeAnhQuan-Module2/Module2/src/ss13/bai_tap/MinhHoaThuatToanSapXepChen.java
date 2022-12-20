@@ -2,7 +2,7 @@ package ss13.bai_tap;
 
 import java.util.Arrays;
 
-public class MinhHoaThuatToanSapXepChon {
+public class MinhHoaThuatToanSapXepChen {
     public static void main(String[] args) {
         int arr [] = {5,3,4,1,2};
         for (int i = 1; i <arr.length ; i++) {
