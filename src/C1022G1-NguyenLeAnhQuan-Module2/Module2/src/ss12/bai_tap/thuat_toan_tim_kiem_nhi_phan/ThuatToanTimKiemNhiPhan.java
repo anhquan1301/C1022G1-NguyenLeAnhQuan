@@ -8,6 +8,8 @@ public class ThuatToanTimKiemNhiPhan {
     public static int binarySearch(int[] array, int value, int rigth, int left){
         int middle = (left+rigth)/2;
          if (left<=rigth){
+
+
             if (array[middle]==value){
                 return middle;
             }else if (array[middle]>value){
