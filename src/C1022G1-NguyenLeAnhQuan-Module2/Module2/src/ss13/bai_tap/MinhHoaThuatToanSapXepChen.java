@@ -1,9 +1,11 @@
 package ss13.bai_tap;
 
+import ss11.bai_tap.mo_hinh_MVC.model.model.Product;
+
 import java.util.Arrays;
 
 public class MinhHoaThuatToanSapXepChen {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         int arr [] = {5,3,4,1,2};
         for (int i = 1; i <arr.length ; i++) {
             int temp = arr[i]; //Cho biến tạm bằng giá trị ban đầu của i, tại i=1 thì temp = 3
