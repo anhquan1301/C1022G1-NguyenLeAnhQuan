@@ -9,29 +9,29 @@ public class Triangle  {
         double ab = a+b;
         double bc = b+c;
         double ca = c+a;
-
-
         if(a<0 || b<0 || c<0 || ab<=c || bc<=a || ca<=b){
             throw new IllegalTriangleException("Không phải cạnh tam giác");
         }else {
             System.out.println("Là cạnh của tam giác");
         }
-
     }
     public static void main(String[] args) {
         boolean check;
         do {
             Scanner sc = new Scanner(System.in);
-            System.out.print("Nhập cạnh tam giác thứ nhất: ");
-            double a = Integer.parseInt(sc.nextLine());
-            System.out.print("Nhập cạnh tam giác thứ hai: ");
-            double b = Integer.parseInt(sc.nextLine());
-            System.out.print("Nhập cạnh tam giác thứ ba: ");
-            double c = Integer.parseInt(sc.nextLine());
             try {
+                System.out.print("Nhập cạnh tam giác thứ nhất: ");
+                double a = Integer.parseInt(sc.nextLine());
+                System.out.print("Nhập cạnh tam giác thứ hai: ");
+                double b = Integer.parseInt(sc.nextLine());
+                System.out.print("Nhập cạnh tam giác thứ ba: ");
+                double c = Integer.parseInt(sc.nextLine());
                 inputTriangle(a, b, c);
                 check = true;
-            }catch (IllegalTriangleException e){
+            }catch (NumberFormatException e){
+                System.out.println("Làm ơn nhập số");
+                check = false;
+            } catch (IllegalTriangleException e){
                 System.out.println(e.getMessage());
                 check = false;
             }finally {

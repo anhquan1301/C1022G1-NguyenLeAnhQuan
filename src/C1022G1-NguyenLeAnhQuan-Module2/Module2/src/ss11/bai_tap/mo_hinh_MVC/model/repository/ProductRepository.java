@@ -9,11 +9,10 @@ import java.util.List;
 
 public class ProductRepository implements IProductRepository{
  private static List<Product> productList = new ArrayList<>();
-
-   Product product1 = new Product(1, "IphoneX", 5000000);
-   Product product3 = new Product(3, "Iphone12", 12000000);
-   Product product2 = new Product(2, "Iphone11", 8000000);
-   public ProductRepository(){
+   static {
+       Product product1 = new Product(1, "IphoneX", 5000000);
+       Product product3 = new Product(3, "Iphone12", 12000000);
+       Product product2 = new Product(2, "Iphone11", 8000000);
       productList.add(product1);
       productList.add(product2);
       productList.add(product3);
