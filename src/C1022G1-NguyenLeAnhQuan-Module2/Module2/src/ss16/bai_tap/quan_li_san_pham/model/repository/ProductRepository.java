@@ -18,29 +18,23 @@ public class ProductRepository implements IProductRepository{
     }
     @Override
     public void addProduct(Product product) {
-        productList.add(product);
+            productList.add(product);
         ProductFile.writeListFile(productList);
-//        List<Product> result = ProductFile.readListFile();
-//        for (Product product1 : result){
-//            System.out.println(product1);
-//        }
     }
-
     @Override
     public void displayProduct() {
-        for(Product product: productList){
+        List<Product> result = ProductFile.readListFile();
+        for (Product product : result){
             System.out.println(product);
         }
-        ProductFile.writeListFile(productList);
     }
-
     @Override
     public void searchProduct(String name) {
-        for (Product product: productList){
+        List<Product> result = ProductFile.readListFile();
+        for (Product product: result){
             if(product.getName().contains(name)){
-                System.out.print("Thông tin sản phẩm: " + product);
+                System.out.println("Thông tin sản phẩm: " + product);
             }
         }
-        ProductFile.writeListFile(productList);
     }
 }

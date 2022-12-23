@@ -19,6 +19,7 @@ public class ProductController {
                         "4.Thoát"
         );
         do {
+            System.out.println("Nhập lựa chọn");
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice){
                 case 1:
