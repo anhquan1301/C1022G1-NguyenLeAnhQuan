@@ -7,7 +7,7 @@ import ss11.bai_tap.mo_hinh_MVC.model.service.ProductService;
 import java.util.Scanner;
 
 public class ProductController {
-    private static final IProductService productService = new ProductService();
+    private static IProductService productService = new ProductService();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
