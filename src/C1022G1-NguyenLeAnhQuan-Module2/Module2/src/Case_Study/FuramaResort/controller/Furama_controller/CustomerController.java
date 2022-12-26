@@ -12,11 +12,13 @@ public class CustomerController {
     private static ICustomerService iCS = new CustomerServiceIplm();
     public static void customer() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("1.Display list customers\n" +
-                "2.Add new customer\n" +
-                "3.Edit customer\n" +
-                "4.Return main menu\n");
+
         do {
+            System.out.println("1.Display list customers\n" +
+                    "2.Add new customer\n" +
+                    "3.Edit customer\n" +
+                    "4.Return main menu\n");
+            System.out.println("-----------------");
             System.out.println("Input your choice");
             int select = Integer.parseInt(sc.nextLine());
             switch (select) {

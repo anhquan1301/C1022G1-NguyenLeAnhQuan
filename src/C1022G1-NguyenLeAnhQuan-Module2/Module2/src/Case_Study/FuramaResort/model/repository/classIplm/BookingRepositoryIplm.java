@@ -6,9 +6,7 @@ import Case_Study.FuramaResort.model.repository.itf.IBookingRepository;
 public class BookingRepositoryIplm implements IBookingRepository {
     @Override
     public void displayList() {
-
     }
-
     @Override
     public void addList(Object object) {
 

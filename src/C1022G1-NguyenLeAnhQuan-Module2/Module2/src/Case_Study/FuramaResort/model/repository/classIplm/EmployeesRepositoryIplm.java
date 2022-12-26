@@ -38,7 +38,7 @@ public class EmployeesRepositoryIplm implements IEmployeesRepository {
     @Override
     public Employee findById(int id) {
         for (int i=0; i<employeesList.size();i++){
-            if(employeesList.get(i).getId()==id){
+            if(employeesList.get(i).getIdEmplyee()==id){
                 return employeesList.get(i);
             }
         }
@@ -48,7 +48,7 @@ public class EmployeesRepositoryIplm implements IEmployeesRepository {
     @Override
     public void updateInformation(Employee employee) {
         for (int i=0;i<employeesList.size();i++){
-            if(employeesList.get(i).getId()==employee.getId()){
+            if(employeesList.get(i).getIdEmplyee()==employee.getIdEmplyee()){
                 employeesList.set(i,employee);
             }
         }

@@ -55,6 +55,6 @@ class Villa extends Facility {
                 "quality='" + quality + '\'' +
                 ", areaPool=" + areaPool +
                 ", numberFloors=" + numberFloors +
-                '}';
+                "} " + super.toString();
     }
 }

@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class UsesServiceController {
     public static void usesService(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("1.Display list customers use service\n" +
-                "2.Display list customers get voucher\n" +
-                "3.Return main menu\n");
         do {
+            System.out.println("1.Display list customers use service\n" +
+                    "2.Display list customers get voucher\n" +
+                    "3.Return main menu\n");
+            System.out.println("-----------------");
             System.out.println("Input your choice");
             int select = Integer.parseInt(sc.nextLine());
             switch (select){

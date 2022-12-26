@@ -11,12 +11,14 @@ public class EmployeesController {
     private static IEmployeesService iES = new EmployeeServiceIplm();
     public static void employees(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("1.Display list employees\n" +
-                "2.Add new employee\n" +
-                "3.Delete employee\n" +
-                "4.Edit employee\n" +
-                "5.Return main menu\n");
+
         do {
+            System.out.println("1.Display list employees\n" +
+                    "2.Add new employee\n" +
+                    "3.Delete employee\n" +
+                    "4.Edit employee\n" +
+                    "5.Return main menu\n");
+            System.out.println("-----------------");
             System.out.println("Input your choice");
             int select = Integer.parseInt(sc.nextLine());
             switch (select){

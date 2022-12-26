@@ -29,6 +29,6 @@ public class Room extends Facility {
     public String toString() {
         return "Room{" +
                 "freeService='" + freeService + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

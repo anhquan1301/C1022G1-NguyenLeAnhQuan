@@ -32,7 +32,7 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
     @Override
     public Customer findById(int id) {
         for (int i=0; i<customerList.size();i++){
-            if(customerList.get(i).getId()==id){
+            if(customerList.get(i).getIdCustomer()==id){
                 return customerList.get(i);
             }
         }
@@ -42,7 +42,7 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
     @Override
     public void updateInformation(Customer customer) {
         for (int i = 0; i <customerList.size() ; i++) {
-            if(customerList.get(i).getId()==customer.getId()){
+            if(customerList.get(i).getIdCustomer()==customer.getIdCustomer()){
                 customerList.set(i,customer);
             }
         }
