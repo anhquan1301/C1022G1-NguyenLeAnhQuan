@@ -2,7 +2,9 @@ package Case_Study.FuramaResort.model.model.extend_facility;
 
 import Case_Study.FuramaResort.model.model.Facility;
 
-public class Villa extends Facility {
+public
+
+class Villa extends Facility {
     String quality;
     double areaPool;
     int numberFloors;

@@ -5,7 +5,7 @@ import ss11.bai_tap.mo_hinh_MVC.model.repository.IProductRepository;
 import ss11.bai_tap.mo_hinh_MVC.model.repository.ProductRepository;
 
 public class ProductService implements IProductService{
-    private IProductRepository repository = new ProductRepository();
+    private static IProductRepository repository = new ProductRepository();
 
     @Override
     public void addProduct(Product product) {

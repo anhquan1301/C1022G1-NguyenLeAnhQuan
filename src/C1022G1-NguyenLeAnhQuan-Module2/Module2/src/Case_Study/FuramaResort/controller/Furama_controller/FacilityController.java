@@ -12,6 +12,7 @@ public class FacilityController {
                 "3.Display list facility maintenance\n" +
                 "4.Return main menu\n");
         do {
+            System.out.println("Input your choice");
             int select = Integer.parseInt(sc.nextLine());
             switch (select){
                 case 1:
@@ -24,6 +25,8 @@ public class FacilityController {
                 case 4:
                     FuramaController.displayMainMenu();
                     break;
+                default:
+                    System.err.println("Please input again");
             }
         }while (true);
     }

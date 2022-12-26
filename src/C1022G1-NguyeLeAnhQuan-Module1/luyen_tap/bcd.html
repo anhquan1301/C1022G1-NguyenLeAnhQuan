@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let input = +prompt("Nhập độ dài mảng")
+    let arr = [];
+    let arr2 = [];
+    let count = 0;
+    for(let i=0; i<input;i++){
+        arr[i] = +prompt("Nhập các phần tử")
+    }
+    for(let i=0;i<arr.length;i++){
+        if(arr[0]==arr[i]){
+            count++
+        }
+    }
+    for(let j=0; j<arr.length;j++){
+        let count2 = 0;
+        for(k=0; k<arr.length;k++){
+            if(arr[k]==arr[j]){
+                count2++        
+                if(count2==count){
+                    arr2.push(arr[k])
+                arr.splice(arr[k], 1)
+                }
+            }
+        }
+    }
+    if(arr.length==arr2.length){
+        document.write(true)
+    }else{
+        document.write(false)
+    }
+</script>
+</body>
+</html>

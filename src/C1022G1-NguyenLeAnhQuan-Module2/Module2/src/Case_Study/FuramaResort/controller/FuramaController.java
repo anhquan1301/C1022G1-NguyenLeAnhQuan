@@ -4,9 +4,7 @@ import Case_Study.FuramaResort.controller.Furama_controller.*;
 
 import java.util.Scanner;
 
-public class
-
-FuramaController {
+public class FuramaController {
     public static void main(String[] args) {
         displayMainMenu();
     }
@@ -21,6 +19,7 @@ FuramaController {
                 "6.Exit\n");
         Scanner sc = new Scanner(System.in);
         do {
+            System.out.println("Input your choice");
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice){
                 case 1:

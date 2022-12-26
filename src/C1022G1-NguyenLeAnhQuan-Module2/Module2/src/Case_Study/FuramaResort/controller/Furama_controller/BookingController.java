@@ -11,6 +11,7 @@ public class BookingController {
                 "2.Display list booking\n" +
                 "3.Return main menu\n");
         do {
+            System.out.println("Input your choice");
             int select = Integer.parseInt(sc.nextLine());
             switch (select){
                 case 1:
@@ -21,6 +22,8 @@ public class BookingController {
                 case 3:
                     FuramaController.displayMainMenu();
                     break;
+                default:
+                    System.err.println("Please input again");
             }
         }while (true);
     }
