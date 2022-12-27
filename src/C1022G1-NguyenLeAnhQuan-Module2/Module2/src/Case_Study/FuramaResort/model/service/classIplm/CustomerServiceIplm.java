@@ -22,7 +22,7 @@ public class CustomerServiceIplm implements ICustomerService{
     }
 
     @Override
-    public Customer findById(int id) {
+    public Customer findById( String id) {
         return iCR.findById(id);
     }
 

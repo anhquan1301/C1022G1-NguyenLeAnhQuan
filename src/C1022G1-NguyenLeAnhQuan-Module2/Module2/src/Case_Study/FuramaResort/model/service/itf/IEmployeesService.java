@@ -7,6 +7,6 @@ import Case_Study.FuramaResort.model.service.IFuramaService;
 
 public interface IEmployeesService extends IFuramaService {
     void deleteEmployees(String name);
-    Employee findById(int id);
+    Employee findById(String id);
     void updateInformation(Employee employee);
 }

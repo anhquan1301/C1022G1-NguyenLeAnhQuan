@@ -27,7 +27,7 @@ public class EmployeesController {
                     break;
                 case 2:
                     System.out.println("Nhập id nhân viên");
-                    int id = Integer.parseInt(sc.nextLine());
+                    String id = sc.nextLine();
                     System.out.println("Nhập tên nhân viên");
                     String name = sc.nextLine();
                     System.out.println("Nhập ngày sinh nhân viên");
@@ -50,13 +50,13 @@ public class EmployeesController {
                     iES.addList(employee);
                     break;
                 case 3:
-                    System.out.println("Nhập tên nhân viên cần xóa");
-                    String nameDelete = sc.nextLine();
-                    iES.deleteEmployees(nameDelete);
+                    System.out.println("Nhập id cần xóa");
+                    String idDelete = sc.nextLine();
+                    iES.deleteEmployees(idDelete);
                     break;
                 case 4:
                     System.out.println("Nhập id nhân viên cần sủa thông tin");
-                    int idFixed = Integer.parseInt(sc.nextLine());
+                    String idFixed = sc.nextLine();
                     Employee employeeIdFixed = iES.findById(idFixed);
                     if(employeeIdFixed!=null){
                         System.out.println("Nhập tên mới nhân viên");

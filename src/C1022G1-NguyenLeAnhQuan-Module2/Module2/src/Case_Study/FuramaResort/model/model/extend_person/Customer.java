@@ -3,31 +3,31 @@ package Case_Study.FuramaResort.model.model.extend_person;
 import Case_Study.FuramaResort.model.model.Person;
 
 public class Customer extends Person {
-    int idCustomer;
+    String idCustomer;
     String customerType;
     String address;
 
     public Customer() {
     }
 
-    public Customer(int idCustomer, String customerType, String address) {
+    public Customer(String idCustomer, String customerType, String address) {
         this.idCustomer = idCustomer;
         this.customerType = customerType;
         this.address = address;
     }
 
-    public Customer( int idCustomer,String name, String date, String gender, String cMND, String phone, String email, String customerType, String address) {
+    public Customer( String idCustomer,String name, String date, String gender, String cMND, String phone, String email, String customerType, String address) {
         super(name, date, gender, cMND, phone, email);
         this.idCustomer = idCustomer;
         this.customerType = customerType;
         this.address = address;
     }
 
-    public int getIdCustomer() {
+    public String getIdCustomer() {
         return idCustomer;
     }
 
-    public void setIdCustomer(int idCustomer) {
+    public void setIdCustomer(String idCustomer) {
         this.idCustomer = idCustomer;
     }
 
@@ -51,8 +51,9 @@ public class Customer extends Person {
     public String toString() {
         return "Customer{" +
                 "idCustomer=" + idCustomer +
+                super.toString() +
                 ", customerType='" + customerType + '\'' +
                 ", address='" + address + '\'' +
-                "} " + super.toString();
+                "} ";
     }
 }

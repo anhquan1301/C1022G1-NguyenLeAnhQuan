@@ -6,20 +6,20 @@ public
 
 class Villa extends Facility {
     String quality;
-    double areaPool;
-    int numberFloors;
+    String areaPool;
+    String numberFloors;
 
     public Villa() {
     }
 
-    public Villa(String quality, double areaPool, int numberFloors) {
+    public Villa(String quality, String areaPool, String numberFloors) {
         this.quality = quality;
         this.areaPool = areaPool;
         this.numberFloors = numberFloors;
     }
 
-    public Villa(String name, double area, int price, int maxPeople, String typeRent, String quality, double areaPool, int numberFloors) {
-        super(name, area, price, maxPeople, typeRent);
+    public Villa(String serviceCode, String name, String area, String price, String maxPeople, String typeRent, String quality, String areaPool, String numberFloors) {
+        super(serviceCode, name, area, price, maxPeople, typeRent);
         this.quality = quality;
         this.areaPool = areaPool;
         this.numberFloors = numberFloors;
@@ -33,28 +33,29 @@ class Villa extends Facility {
         this.quality = quality;
     }
 
-    public double getAreaPool() {
+    public String getAreaPool() {
         return areaPool;
     }
 
-    public void setAreaPool(double areaPool) {
+    public void setAreaPool(String areaPool) {
         this.areaPool = areaPool;
     }
 
-    public int getNumberFloors() {
+    public String getNumberFloors() {
         return numberFloors;
     }
 
-    public void setNumberFloors(int numberFloors) {
+    public void setNumberFloors(String numberFloors) {
         this.numberFloors = numberFloors;
     }
 
     @Override
     public String toString() {
         return "Villa{" +
+                super.toString() +
                 "quality='" + quality + '\'' +
-                ", areaPool=" + areaPool +
-                ", numberFloors=" + numberFloors +
-                "} " + super.toString();
+                ", areaPool='" + areaPool + '\'' +
+                ", numberFloors='" + numberFloors + '\'' +
+                "} ";
     }
 }

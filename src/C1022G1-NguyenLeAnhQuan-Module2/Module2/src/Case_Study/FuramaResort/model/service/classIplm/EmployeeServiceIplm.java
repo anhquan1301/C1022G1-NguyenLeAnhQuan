@@ -23,7 +23,7 @@ public class EmployeeServiceIplm implements IEmployeesService {
     }
 
     @Override
-    public Employee findById(int id) {
+    public Employee findById(String id) {
         return iER.findById(id);
     }
 

@@ -9,11 +9,11 @@ import java.util.List;
 public class CustomerRepositoryIplm implements ICustomerRepository {
     private static List<Customer> customerList = new LinkedList<>();
     static {
-        customerList.add(new Customer(1, "Nguyễn Lê Anh Quân", "13/01/2000", "Nam","201888881","0909999999",
+        customerList.add(new Customer("1", "Nguyễn Lê Anh Quân", "13/01/2000", "Nam","201888881","0909999999",
                 "nlaq123@gmail.com", "Diamond", "678 Phạm Văn Đồng, Đà Nẵng"));
-        customerList.add(new Customer(2, "Lê Thị B", "18/04/1998", "Nữ","201834581","0909342999",
+        customerList.add(new Customer("2", "Lê Thị B", "18/04/1998", "Nữ","201834581","0909342999",
                 "mld33@gmail.com", "Gold", "123 Hoàng Diệu, Đà Nẵng"));
-        customerList.add(new Customer(3, "Trần Văn Đ", "24/01/1988", "Nam","201812381","0909839999",
+        customerList.add(new Customer("3", "Trần Văn Đ", "24/01/1988", "Nam","201812381","0909839999",
                 "nek44@gmail.com", "Member", "222 Trưng Nữ Vương, Đà Nẵng"));
     }
     @Override
@@ -30,9 +30,9 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
     }
 
     @Override
-    public Customer findById(int id) {
+    public Customer findById(String id) {
         for (int i=0; i<customerList.size();i++){
-            if(customerList.get(i).getIdCustomer()==id){
+            if(customerList.get(i).getIdCustomer().equals(id)){
                 return customerList.get(i);
             }
         }
@@ -42,7 +42,7 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
     @Override
     public void updateInformation(Customer customer) {
         for (int i = 0; i <customerList.size() ; i++) {
-            if(customerList.get(i).getIdCustomer()==customer.getIdCustomer()){
+            if(customerList.get(i).getIdCustomer().equals(customer.getIdCustomer())){
                 customerList.set(i,customer);
             }
         }

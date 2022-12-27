@@ -27,7 +27,7 @@ public class CustomerController {
                     break;
                 case 2:
                     System.out.println("Nhập id khách hàng");
-                    int id = Integer.parseInt(sc.nextLine());
+                    String id = sc.nextLine();
                     System.out.println("Nhập tên khách hàng");
                     String name = sc.nextLine();
                     System.out.println("Nhập ngày sinh khách hàng");
@@ -49,7 +49,7 @@ public class CustomerController {
                     break;
                 case 3:
                     System.out.println("Nhập id khách hàng cần sủa thông tin");
-                    int idFixed = Integer.parseInt(sc.nextLine());
+                    String idFixed = sc.nextLine();
                     Customer customerIdFixed = iCS.findById(idFixed);
                     if (customerIdFixed != null) {
                         System.out.println("Nhập tên mới khách hàng");

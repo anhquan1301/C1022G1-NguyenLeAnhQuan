@@ -6,16 +6,16 @@ import Case_Study.FuramaResort.model.model.extend_person.Customer;
 import java.time.LocalDate;
 
 public class Booking {
-    private int id;
+    private String id;
     private LocalDate startDate;
     private LocalDate endDate;
-    int customerId;
+    String customerId;
     String nameService;
 
     public Booking() {
     }
 
-    public Booking(int id, LocalDate startDate, LocalDate endDate, int customerId, String nameService) {
+    public Booking(String id, LocalDate startDate, LocalDate endDate, String customerId, String nameService) {
         this.id = id;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -23,11 +23,11 @@ public class Booking {
         this.nameService = nameService;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -47,11 +47,11 @@ public class Booking {
         this.endDate = endDate;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
