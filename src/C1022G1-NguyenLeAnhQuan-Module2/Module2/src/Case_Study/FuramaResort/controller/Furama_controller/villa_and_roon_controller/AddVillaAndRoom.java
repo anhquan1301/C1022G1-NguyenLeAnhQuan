@@ -4,12 +4,25 @@ import Case_Study.FuramaResort.controller.Furama_controller.FacilityController;
 import Case_Study.FuramaResort.model.model.Facility;
 import Case_Study.FuramaResort.model.model.extend_facility.Room;
 import Case_Study.FuramaResort.model.model.extend_facility.Villa;
+import Case_Study.FuramaResort.ulti.IOTEXT.RWVilla;
+import Case_Study.FuramaResort.ulti.Validate;
 
 import java.util.Scanner;
 
 public class AddVillaAndRoom {
     public static void villaAndRoom() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Cú pháp nhập dữ liệu");
+        System.out.println("-Mã dịch vụ phải đúng định dạng: SVXX-YYYY, với YYYY là các số từ 0-9, XX là:\n" +
+                "-Nếu là Villa thì XX sẽ là VL\n" +
+                "-Nếu Room thì XX sẽ là RO\n" +
+                "-Tên dịch vụ phải viết hoa ký tự đầu, các ký tự sau là ký tự bình thường\n" +
+                "-Diện tích sử dụng và diện tích hồ bơi phải là số thực lớn hơn 30m2\n" +
+                "-Chi phí thuê phải là số dương\n" +
+                "-Số lượng người tối đa phải >0 và nhỏ hơn <20\n" +
+                "-Số tầng phải là số nguyên dương.\n" +
+                "-Kiểu thuê, Tiêu chuẩn phòng chuẩn hóa dữ liệu giống tên dịch vụ\n");
+        System.out.println("-------------------------------------");
         do {
             System.out.println("1.Add New Villa\n" +
                     "2.Add new Room\n" +
@@ -19,44 +32,89 @@ public class AddVillaAndRoom {
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
-                    System.out.println("Nhập mã dịch vụ villa");
-                    String serviceCodeVL = sc.nextLine();
-                    System.out.println("Nhập tên villa");
-                    String nameVL = sc.nextLine();
-                    System.out.println("Nhập diện tích villa");
-                    String areaVL = sc.nextLine();
-                    System.out.println("Nhập giá của villa");
-                    String priceVL = sc.nextLine();
-                    System.out.println("Nhập số lượng người tối đa ở villa");
-                    String maxPeopleVL = sc.nextLine();
-                    System.out.println("Nhập kiểu thuê villa");
-                    String typeRentVL = sc.nextLine();
-                    System.out.println("Nhập chất lượng villa");
-                    String quality = sc.nextLine();
-                    System.out.println("Nhập diện tích villa");
-                    String areaPool = sc.nextLine();
-                    System.out.println("Nhập số tầng của villa");
-                    String numberFloors = sc.nextLine();
+                    String serviceCodeVL;
+                    do {
+                        System.out.println("Nhập mã dịch vụ villa");
+                         serviceCodeVL = sc.nextLine();
+                    }while (!serviceCodeVL.matches(Validate.getRegexServiceCodeVilla()));
+                    String nameVL;
+                    do {
+                        System.out.println("Nhập tên villa");
+                        nameVL = sc.nextLine();
+                    }while (!nameVL.matches(Validate.getRegexServiceName()));
+                    String areaVL;
+                    do {
+                        System.out.println("Nhập diện tích villa");
+                        areaVL = sc.nextLine();
+                    }while (!areaVL.matches(Validate.getRegexArea()));
+                    String priceVL;
+                    do {
+                        System.out.println("Nhập giá của villa");
+                        priceVL = sc.nextLine();
+                    }while (!priceVL.matches(Validate.getRegexPrice()));
+                    String maxPeopleVL;
+                    do {
+                        System.out.println("Nhập số lượng người tối đa ở villa");
+                        maxPeopleVL = sc.nextLine();
+                    }while (!maxPeopleVL.matches(Validate.getRegexMaxPeople()));
+                    String typeRentVL;
+                    do {
+                        System.out.println("Nhập kiểu thuê villa");
+                        typeRentVL = sc.nextLine();
+                    }while (!typeRentVL.matches(Validate.getRegexTypeRent()));
+                    String quality;
+                    do {
+                        System.out.println("Nhập chất lượng villa");
+                        quality = sc.nextLine();
+                    }while (!quality.matches(Validate.getRegexQuality()));
+                    String areaPool;
+                    do {
+                        System.out.println("Nhập diện tích hồ bơi của villa");
+                        areaPool = sc.nextLine();
+                    }while (!areaPool.matches(Validate.getRegexArea()));
+                    String numberFloors;
+                    do {
+                        System.out.println("Nhập số tầng của villa");
+                        numberFloors = sc.nextLine();
+                    }while (!numberFloors.matches(Validate.getRegexNumberFloors()));
                     Villa vl = new Villa(serviceCodeVL,nameVL, areaVL, priceVL, maxPeopleVL, typeRentVL, quality, areaPool, numberFloors);
-                    FacilityController.iFS.addList(vl);
+                    FacilityController.iFS.addVilla(vl);
                     break;
                 case 2:
-                    System.out.println("Nhập mã dịch vụ room");
-                    String serviceCodeRO = sc.nextLine();
-                    System.out.println("Nhập tên room");
-                    String nameRO = sc.nextLine();
-                    System.out.println("Nhập diện tích room");
-                    String areaRO = sc.nextLine();
-                    System.out.println("Nhập tên giá của room");
-                    String priceRO = sc.nextLine();
-                    System.out.println("Nhập số lượng người tối đa ở room");
-                    String maxPeopleRO = sc.nextLine();
-                    System.out.println("Nhập kiểu thuê room");
-                    String typeRentRO = sc.nextLine();
+                    String serviceCodeRO;
+                    do {
+                        System.out.println("Nhập mã dịch vụ room");
+                        serviceCodeRO = sc.nextLine();
+                    }while (!serviceCodeRO.matches(Validate.getRegexServiceCodeRoom()));
+                    String nameRO;
+                    do {
+                        System.out.println("Nhập tên room");
+                         nameRO = sc.nextLine();
+                    }while (!nameRO.matches(Validate.getRegexServiceName()));
+                    String areaRO;
+                    do {
+                        System.out.println("Nhập diện tích room");
+                        areaRO = sc.nextLine();
+                    }while (!areaRO.matches(Validate.getRegexArea()));
+                    String priceRO;
+                    do {
+                        System.out.println("Nhập tên giá của room");
+                        priceRO = sc.nextLine();
+                    }while (!priceRO.matches(Validate.getRegexPrice()));
+                    String maxPeopleRO;
+                    do {
+                        System.out.println("Nhập số lượng người tối đa ở room");
+                        maxPeopleRO = sc.nextLine();
+                    }while (!maxPeopleRO.matches(Validate.getRegexMaxPeople()));
+                    String typeRentRO;
+                    do {
+                        System.out.println("Nhập kiểu thuê room");
+                        typeRentRO = sc.nextLine();
+                    }while (!typeRentRO.matches(Validate.getRegexTypeRent()));
                     System.out.println("Nhập dịch vụ miễn phí của room");
                     String freeService = sc.nextLine();
                     Room ro = new Room(serviceCodeRO,nameRO,areaRO,priceRO,maxPeopleRO,typeRentRO,freeService);
-                    FacilityController.iFS.addList(ro);
+                    FacilityController.iFS.addRoom(ro);
                     break;
                 case 3:
                     FacilityController.facility();

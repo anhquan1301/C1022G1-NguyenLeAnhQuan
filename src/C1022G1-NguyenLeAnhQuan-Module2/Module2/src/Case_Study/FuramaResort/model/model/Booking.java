@@ -9,8 +9,8 @@ public class Booking {
     private String id;
     private LocalDate startDate;
     private LocalDate endDate;
-    String customerId;
-    String nameService;
+    private String customerId;
+    private String nameService;
 
     public Booking() {
     }

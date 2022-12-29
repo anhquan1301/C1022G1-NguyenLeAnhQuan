@@ -28,7 +28,12 @@ public class Room extends Facility {
     @Override
     public String toString() {
         return "Room{" + super.toString() +
-                "freeService='" + freeService + '\'' +
+                ", freeService='" + freeService + '\'' +
                 "} ";
+    }
+
+    public String formatRoomCSV(){
+        String comma = ",";
+        return super.convertLineFacility()+comma+this.freeService;
     }
 }

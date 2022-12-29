@@ -81,4 +81,8 @@ public abstract class Person {
                 ", email='" + email + '\'' +
                 '}';
     }
+    public String convertLine(){
+        String comma = ",";
+        return this.name+comma+this.date+comma+this.gender+comma+this.cMND+comma+this.phone+comma+this.email;
+    }
 }

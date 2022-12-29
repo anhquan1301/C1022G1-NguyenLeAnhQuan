@@ -18,7 +18,8 @@ class Villa extends Facility {
         this.numberFloors = numberFloors;
     }
 
-    public Villa(String serviceCode, String name, String area, String price, String maxPeople, String typeRent, String quality, String areaPool, String numberFloors) {
+    public Villa(String serviceCode, String name, String area, String price, String maxPeople,
+                 String typeRent, String quality, String areaPool, String numberFloors) {
         super(serviceCode, name, area, price, maxPeople, typeRent);
         this.quality = quality;
         this.areaPool = areaPool;
@@ -53,9 +54,14 @@ class Villa extends Facility {
     public String toString() {
         return "Villa{" +
                 super.toString() +
-                "quality='" + quality + '\'' +
+                ", quality='" + quality + '\'' +
                 ", areaPool='" + areaPool + '\'' +
                 ", numberFloors='" + numberFloors + '\'' +
                 "} ";
+    }
+    public String formatCSVVilla(){
+        String comma = ",";
+        return super.convertLineFacility()+comma+this.quality+comma+areaPool+comma+numberFloors;
+
     }
 }

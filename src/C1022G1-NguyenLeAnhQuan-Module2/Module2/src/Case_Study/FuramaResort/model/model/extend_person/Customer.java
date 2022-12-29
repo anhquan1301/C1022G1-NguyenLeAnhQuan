@@ -16,7 +16,8 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    public Customer( String idCustomer,String name, String date, String gender, String cMND, String phone, String email, String customerType, String address) {
+    public Customer( String idCustomer,String name, String date, String gender, String cMND, String phone,
+                     String email, String customerType, String address) {
         super(name, date, gender, cMND, phone, email);
         this.idCustomer = idCustomer;
         this.customerType = customerType;
@@ -55,5 +56,9 @@ public class Customer extends Person {
                 ", customerType='" + customerType + '\'' +
                 ", address='" + address + '\'' +
                 "} ";
+    }
+    public String formatCSVCustomer(){
+        String comma = ",";
+        return this.idCustomer+comma+super.convertLine()+comma +this.customerType+comma+this.address;
     }
 }

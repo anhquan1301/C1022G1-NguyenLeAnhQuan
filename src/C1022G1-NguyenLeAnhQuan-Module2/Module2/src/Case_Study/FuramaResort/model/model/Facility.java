@@ -80,4 +80,9 @@ public abstract class Facility {
                 ", typeRent='" + typeRent + '\'' +
                 '}';
     }
+    public String convertLineFacility(){
+        String comma = ",";
+        return this.serviceCode+comma+this.name+comma+this.area+comma+
+                this.price+comma+this.maxPeople+comma+this.typeRent;
+    }
 }

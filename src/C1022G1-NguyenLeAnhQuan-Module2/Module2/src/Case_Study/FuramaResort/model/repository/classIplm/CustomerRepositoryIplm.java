@@ -2,6 +2,8 @@ package Case_Study.FuramaResort.model.repository.classIplm;
 
 import Case_Study.FuramaResort.model.model.extend_person.Customer;
 import Case_Study.FuramaResort.model.repository.itf.ICustomerRepository;
+import Case_Study.FuramaResort.ulti.IOTEXT.RWCustomer;
+import Case_Study.FuramaResort.ulti.IOTEXT.RWEmployee;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -18,6 +20,7 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
     }
     @Override
     public void displayList() {
+       customerList = RWCustomer.readFile();
         for (Customer customer : customerList){
             System.out.println(customer);
         }
@@ -25,8 +28,10 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
 
     @Override
     public void addList(Object object) {
+        customerList = RWCustomer.readFile();
         Customer customer = (Customer) object;
         customerList.add(customer);
+        RWCustomer.writeFile(customerList);
     }
 
     @Override
@@ -41,9 +46,11 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
 
     @Override
     public void updateInformation(Customer customer) {
+        customerList = RWCustomer.readFile();
         for (int i = 0; i <customerList.size() ; i++) {
             if(customerList.get(i).getIdCustomer().equals(customer.getIdCustomer())){
                 customerList.set(i,customer);
+                RWCustomer.writeFile(customerList);
             }
         }
     }
