@@ -72,7 +72,7 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return ", serviceCode='" + serviceCode + '\'' +
+        return "serviceCode='" + serviceCode + '\'' +
                 ", name='" + name + '\'' +
                 ", area='" + area + '\'' +
                 ", price='" + price + '\'' +
@@ -81,8 +81,8 @@ public abstract class Facility {
                 '}';
     }
     public String convertLineFacility(){
-        String comma = ",";
-        return this.serviceCode+comma+this.name+comma+this.area+comma+
-                this.price+comma+this.maxPeople+comma+this.typeRent;
+       final String COMMA = ",";
+        return this.serviceCode+COMMA+this.name+COMMA+this.area+COMMA+
+                this.price+COMMA+this.maxPeople+COMMA+this.typeRent;
     }
 }

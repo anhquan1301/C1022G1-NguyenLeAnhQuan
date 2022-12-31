@@ -27,7 +27,6 @@ public class FacilityRepositoryIplm implements IFacilityRepository {
         facilityMap.putAll(vM);
         Map<Room, Integer> rM = RWRoom.readFile();
         facilityMap.putAll(rM);
-
         System.out.println("List Facility");
         for (Map.Entry<Facility,Integer> entry: facilityMap.entrySet()){
             if(entry.getValue()<5){
@@ -41,14 +40,12 @@ public class FacilityRepositoryIplm implements IFacilityRepository {
         vlMap.put(villa,0);
         RWVilla.writeFile(vlMap);
     }
-
     @Override
     public void addRoom(Room room) {
         Map<Room,Integer> rMap = RWRoom.readFile();
         rMap.put(room,0);
         RWRoom.writeFile(rMap);
     }
-
     @Override
     public void addList(Object object) {
 //        Facility facility = (Facility) object;

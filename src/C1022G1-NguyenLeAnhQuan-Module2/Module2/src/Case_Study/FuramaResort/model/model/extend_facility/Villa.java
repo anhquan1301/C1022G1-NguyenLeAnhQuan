@@ -60,8 +60,8 @@ class Villa extends Facility {
                 "} ";
     }
     public String formatCSVVilla(){
-        String comma = ",";
-        return super.convertLineFacility()+comma+this.quality+comma+areaPool+comma+numberFloors;
+       final String COMMA = ",";
+        return super.convertLineFacility()+COMMA+this.quality+COMMA+areaPool+COMMA+numberFloors;
 
     }
 }

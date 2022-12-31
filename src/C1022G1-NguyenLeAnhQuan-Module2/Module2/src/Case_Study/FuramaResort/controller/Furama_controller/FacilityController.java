@@ -23,6 +23,8 @@ public class FacilityController {
             switch (select) {
                 case 1:
                     iFS.displayList();
+
+
                     break;
                 case 2:
                     AddVillaAndRoom.villaAndRoom();

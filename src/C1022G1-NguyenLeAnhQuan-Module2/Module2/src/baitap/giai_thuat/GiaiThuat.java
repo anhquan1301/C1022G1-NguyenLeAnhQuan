@@ -1,4 +1,4 @@
-package baitap;
+package baitap.giai_thuat;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -58,7 +58,7 @@ public class Customer extends Person {
                 "} ";
     }
     public String formatCSVCustomer(){
-        String comma = ",";
-        return this.idCustomer+comma+super.convertLine()+comma +this.customerType+comma+this.address;
+       final String COMMA = ",";
+        return this.idCustomer+COMMA+super.convertLine()+COMMA +this.customerType+COMMA+this.address;
     }
 }

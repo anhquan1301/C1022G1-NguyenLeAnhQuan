@@ -82,7 +82,7 @@ public abstract class Person {
                 '}';
     }
     public String convertLine(){
-        String comma = ",";
-        return this.name+comma+this.date+comma+this.gender+comma+this.cMND+comma+this.phone+comma+this.email;
+       final String COMMA = ",";
+        return this.name+COMMA+this.date+COMMA+this.gender+COMMA+this.cMND+COMMA+this.phone+COMMA+this.email;
     }
 }

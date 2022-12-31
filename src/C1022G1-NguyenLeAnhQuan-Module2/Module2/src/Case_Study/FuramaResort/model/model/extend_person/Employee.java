@@ -69,7 +69,7 @@ public class Employee extends Person {
                 "} ";
     }
     public String formatCSVEmployee(){
-        String comma = ",";
-        return this.idEmplyee+comma+super.convertLine()+comma+this.level+comma+this.position+comma+this.salary;
+       final String COMMA = ",";
+        return this.idEmplyee+COMMA+super.convertLine()+COMMA+this.level+COMMA+this.position+COMMA+this.salary;
     }
 }
