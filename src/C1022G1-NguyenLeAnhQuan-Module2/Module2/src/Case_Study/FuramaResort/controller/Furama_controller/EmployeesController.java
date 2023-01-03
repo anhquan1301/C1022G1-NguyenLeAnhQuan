@@ -9,10 +9,9 @@ import Case_Study.FuramaResort.ulti.exception.NotFoundException;
 import java.util.Scanner;
 
 public class EmployeesController {
-    private static IEmployeesService iES = new EmployeeServiceIplm();
+    public static IEmployeesService iES = new EmployeeServiceIplm();
     public static void employees(){
         Scanner sc = new Scanner(System.in);
-
         do {
             System.out.println("1.Hiển thị danh sách nhân viên\n" +
                     "2.Thêm nhân viên mới\n" +
@@ -52,10 +51,16 @@ public class EmployeesController {
                         iES.addList(employee);
                         break;
                     case 3:
-                        System.out.println("Nhập id cần xóa");
-                        String idDelete = sc.nextLine();
-                        iES.deleteEmployees(idDelete);
-                        break;
+                        String idDelete;
+                        do {
+                            System.out.println("Nhập id cần xóa");
+                            idDelete = sc.nextLine();
+                            if(iES.findById(idDelete)!=null){
+                                iES.deleteEmployees(idDelete);
+                            }else {
+                                throw new NotFoundException("Không tìm thấy id cần xóa");
+                            }
+                        }while(true);
                     case 4:
                         System.out.println("Nhập id nhân viên cần sủa thông tin");
                         String idFixed = sc.nextLine();
@@ -89,8 +94,6 @@ public class EmployeesController {
                             employeeIdFixed.setPosition(positionNew);
                             employeeIdFixed.setSalary(salaryNew);
                             iES.updateInformation(employeeIdFixed);
-                        }else {
-                            throw new NotFoundException("Không tìm thấy đối tượng cần tìm");
                         }
                         break;
                     case 5:
@@ -100,8 +103,8 @@ public class EmployeesController {
                 }
             }catch (NumberFormatException e){
                 System.err.println("Nhập lại 1 số");
-            }catch (NotFoundException e) {
-                e.printStackTrace();
+            } catch (NotFoundException e) {
+                System.err.println(e.getMessage());
             }
         }while (true);
     }

@@ -4,8 +4,6 @@ import Case_Study.FuramaResort.controller.Furama_controller.*;
 
 import java.util.Scanner;
 
-
-
 public class FuramaController {
     public static void main(String[] args) {
         displayMainMenu();
