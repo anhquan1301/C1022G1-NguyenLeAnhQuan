@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class FacilityRepositoryIplm implements IFacilityRepository {
 
-    
+
     private static Map<Villa, Integer> vM = new LinkedHashMap<>();
     private static Map<Room, Integer> rM = new LinkedHashMap<>();
 //    static {
@@ -42,15 +42,13 @@ public class FacilityRepositoryIplm implements IFacilityRepository {
     }
     @Override
     public void addVilla(Villa villa) {
-        RWVilla.readFile();
+       vM.clear();
         vM.put(villa,0);
-
-
         RWVilla.writeFile(vM);
     }
     @Override
     public void addRoom(Room room) {
-        RWRoom.readFile();
+       rM.clear();
         rM.put(room,0);
         RWRoom.writeFile(rM);
     }

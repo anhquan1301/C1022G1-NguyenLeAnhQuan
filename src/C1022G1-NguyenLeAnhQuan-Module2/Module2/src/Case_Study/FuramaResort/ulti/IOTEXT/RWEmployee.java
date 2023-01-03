@@ -48,7 +48,27 @@ public class RWEmployee {
         }
         return  employeeList;
     }
-    public static void writerFile(List<Employee> employeeList){
+    public static void writerFileAppend(List<Employee> employeeList){
+        FileWriter fileWriter=null;
+        BufferedWriter bufferedWriter=null;
+        try {
+            fileWriter = new FileWriter(FILE_PATH,true);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Employee employee : employeeList){
+                bufferedWriter.write(employee.formatCSVEmployee());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void writerFileNotAppend(List<Employee> employeeList){
         FileWriter fileWriter=null;
         BufferedWriter bufferedWriter=null;
         try {

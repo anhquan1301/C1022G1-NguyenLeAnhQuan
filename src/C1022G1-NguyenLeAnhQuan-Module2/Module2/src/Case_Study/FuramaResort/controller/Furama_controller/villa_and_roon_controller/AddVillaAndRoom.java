@@ -22,104 +22,154 @@ public class AddVillaAndRoom {
                 "-Kiểu thuê, Tiêu chuẩn phòng chuẩn hóa dữ liệu giống tên dịch vụ\n");
         System.out.println("-------------------------------------");
         do {
-            System.out.println("1.Add New Villa\n" +
-                    "2.Add new Room\n" +
-                    "3.Back to menu\n");
+            System.out.println("1.Thêm mới villa\n" +
+                    "2.Thêm mới room\n" +
+                    "3.Trở về menu chính\n");
             System.out.println("------------------");
-            System.out.println("Input your choice");
-            int choice = Integer.parseInt(sc.nextLine());
-            switch (choice) {
-                case 1:
-                    String serviceCodeVL;
-                    do {
-                        System.out.println("Nhập mã dịch vụ villa");
-                         serviceCodeVL = sc.nextLine();
-                    }while (!serviceCodeVL.matches(Validate.REGEX_SERVICE_CODE_VILLA));
-                    String nameVL;
-                    do {
-                        System.out.println("Nhập tên villa");
-                        nameVL = sc.nextLine();
-                    }while (!nameVL.matches(Validate.REGEX_SERVICE_NAME));
-                    String areaVL;
-                    do {
-                        System.out.println("Nhập diện tích villa");
-                        areaVL = sc.nextLine();
-                    }while (!areaVL.matches(Validate.REGEX_AREA));
-                    String priceVL;
-                    do {
-                        System.out.println("Nhập giá của villa");
-                        priceVL = sc.nextLine();
-                    }while (!priceVL.matches(Validate.REGEX_PRICE));
-                    String maxPeopleVL;
-                    do {
-                        System.out.println("Nhập số lượng người tối đa ở villa");
-                        maxPeopleVL = sc.nextLine();
-                    }while (!maxPeopleVL.matches(Validate.REGEX_MAX_PEOPLE));
-                    String typeRentVL;
-                    do {
-                        System.out.println("Nhập kiểu thuê villa");
-                        typeRentVL = sc.nextLine();
-                    }while (!typeRentVL.matches(Validate.REGEX_TYPE_RENT));
-                    String quality;
-                    do {
-                        System.out.println("Nhập chất lượng villa");
-                        quality = sc.nextLine();
-                    }while (!quality.matches(Validate.REGEX_QUALITY));
-                    String areaPool;
-                    do {
-                        System.out.println("Nhập diện tích hồ bơi của villa");
-                        areaPool = sc.nextLine();
-                    }while (!areaPool.matches(Validate.REGEX_AREA));
-                    String numberFloors;
-                    do {
-                        System.out.println("Nhập số tầng của villa");
-                        numberFloors = sc.nextLine();
-                    }while (!numberFloors.matches(Validate.REGEX_NUMBER_FLOORS));
-                    Villa vl = new Villa(serviceCodeVL,nameVL, areaVL, priceVL, maxPeopleVL, typeRentVL, quality, areaPool, numberFloors);
-                    FacilityController.iFS.addVilla(vl);
-                    break;
-                case 2:
-                    String serviceCodeRO;
-                    do {
-                        System.out.println("Nhập mã dịch vụ room");
-                        serviceCodeRO = sc.nextLine();
-                    }while (!serviceCodeRO.matches(Validate.REGEX_SERVICE_CODE_ROOM));
-                    String nameRO;
-                    do {
-                        System.out.println("Nhập tên room");
-                         nameRO = sc.nextLine();
-                    }while (!nameRO.matches(Validate.REGEX_SERVICE_NAME));
-                    String areaRO;
-                    do {
-                        System.out.println("Nhập diện tích room");
-                        areaRO = sc.nextLine();
-                    }while (!areaRO.matches(Validate.REGEX_AREA));
-                    String priceRO;
-                    do {
-                        System.out.println("Nhập tên giá của room");
-                        priceRO = sc.nextLine();
-                    }while (!priceRO.matches(Validate.REGEX_PRICE));
-                    String maxPeopleRO;
-                    do {
-                        System.out.println("Nhập số lượng người tối đa ở room");
-                        maxPeopleRO = sc.nextLine();
-                    }while (!maxPeopleRO.matches(Validate.REGEX_MAX_PEOPLE));
-                    String typeRentRO;
-                    do {
-                        System.out.println("Nhập kiểu thuê room");
-                        typeRentRO = sc.nextLine();
-                    }while (!typeRentRO.matches(Validate.REGEX_TYPE_RENT));
-                    System.out.println("Nhập dịch vụ miễn phí của room");
-                    String freeService = sc.nextLine();
-                    Room ro = new Room(serviceCodeRO,nameRO,areaRO,priceRO,maxPeopleRO,typeRentRO,freeService);
-                    FacilityController.iFS.addRoom(ro);
-                    break;
-                case 3:
-                    FacilityController.facility();
-                    break;
-                default:
-                    System.err.println("Please input again");
+            System.out.println("Nhập lựa chọn của bạn");
+            try{
+               int choice = Integer.parseInt(sc.nextLine());
+                switch (choice) {
+                    case 1:
+                        String serviceCodeVL;
+                        do {
+                            System.out.println("Nhập mã dịch vụ villa");
+                            serviceCodeVL = sc.nextLine();
+                            if(!serviceCodeVL.matches(Validate.REGEX_SERVICE_CODE_VILLA)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!serviceCodeVL.matches(Validate.REGEX_SERVICE_CODE_VILLA));
+                        String nameVL;
+                        do {
+                            System.out.println("Nhập tên villa");
+                            nameVL = sc.nextLine();
+                            if(!nameVL.matches(Validate.REGEX_SERVICE_NAME)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!nameVL.matches(Validate.REGEX_SERVICE_NAME));
+                        String areaVL;
+                        do {
+                            System.out.println("Nhập diện tích villa");
+                            areaVL = sc.nextLine();
+                            if(!areaVL.matches(Validate.REGEX_AREA)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!areaVL.matches(Validate.REGEX_AREA));
+                        String priceVL;
+                        do {
+                            System.out.println("Nhập giá của villa");
+                            priceVL = sc.nextLine();
+                            if(!priceVL.matches(Validate.REGEX_PRICE)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!priceVL.matches(Validate.REGEX_PRICE));
+                        String maxPeopleVL;
+                        do {
+                            System.out.println("Nhập số lượng người tối đa ở villa");
+                            maxPeopleVL = sc.nextLine();
+                            if(!maxPeopleVL.matches(Validate.REGEX_MAX_PEOPLE)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!maxPeopleVL.matches(Validate.REGEX_MAX_PEOPLE));
+                        String typeRentVL;
+                        do {
+                            System.out.println("Nhập kiểu thuê villa");
+                            typeRentVL = sc.nextLine();
+                            if(!typeRentVL.matches(Validate.REGEX_TYPE_RENT)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!typeRentVL.matches(Validate.REGEX_TYPE_RENT));
+                        String quality;
+                        do {
+                            System.out.println("Nhập chất lượng villa");
+                            quality = sc.nextLine();
+                            if(!quality.matches(Validate.REGEX_QUALITY)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!quality.matches(Validate.REGEX_QUALITY));
+                        String areaPool;
+                        do {
+                            System.out.println("Nhập diện tích hồ bơi của villa");
+                            areaPool = sc.nextLine();
+                            if(!areaPool.matches(Validate.REGEX_AREA)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!areaPool.matches(Validate.REGEX_AREA));
+                        String numberFloors;
+                        do {
+                            System.out.println("Nhập số tầng của villa");
+                            numberFloors = sc.nextLine();
+                            if(!numberFloors.matches(Validate.REGEX_NUMBER_FLOORS)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!numberFloors.matches(Validate.REGEX_NUMBER_FLOORS));
+                        Villa vl = new Villa(serviceCodeVL,nameVL, areaVL, priceVL, maxPeopleVL, typeRentVL, quality, areaPool, numberFloors);
+                        FacilityController.iFS.addVilla(vl);
+                        break;
+                    case 2:
+                        String serviceCodeRO;
+                        do {
+                            System.out.println("Nhập mã dịch vụ room");
+                            serviceCodeRO = sc.nextLine();
+                            if(!serviceCodeRO.matches(Validate.REGEX_SERVICE_CODE_ROOM)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!serviceCodeRO.matches(Validate.REGEX_SERVICE_CODE_ROOM));
+                        String nameRO;
+                        do {
+                            System.out.println("Nhập tên room");
+                            nameRO = sc.nextLine();
+                            if(!nameRO.matches(Validate.REGEX_SERVICE_NAME)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!nameRO.matches(Validate.REGEX_SERVICE_NAME));
+                        String areaRO;
+                        do {
+                            System.out.println("Nhập diện tích room");
+                            areaRO = sc.nextLine();
+                            if(!areaRO.matches(Validate.REGEX_AREA)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!areaRO.matches(Validate.REGEX_AREA));
+                        String priceRO;
+                        do {
+                            System.out.println("Nhập tên giá của room");
+                            priceRO = sc.nextLine();
+                            if(!priceRO.matches(Validate.REGEX_PRICE)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!priceRO.matches(Validate.REGEX_PRICE));
+                        String maxPeopleRO;
+                        do {
+                            System.out.println("Nhập số lượng người tối đa ở room");
+                            maxPeopleRO = sc.nextLine();
+                            if(!maxPeopleRO.matches(Validate.REGEX_MAX_PEOPLE)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!maxPeopleRO.matches(Validate.REGEX_MAX_PEOPLE));
+                        String typeRentRO;
+                        do {
+                            System.out.println("Nhập kiểu thuê room");
+                            typeRentRO = sc.nextLine();
+                            if(!typeRentRO.matches(Validate.REGEX_TYPE_RENT)){
+                                System.err.println("Nhập lại đúng cú pháp");
+                            }
+                        }while (!typeRentRO.matches(Validate.REGEX_TYPE_RENT));
+                        System.out.println("Nhập dịch vụ miễn phí của room");
+                        String freeService = sc.nextLine();
+                        Room ro = new Room(serviceCodeRO,nameRO,areaRO,priceRO,maxPeopleRO,typeRentRO,freeService);
+                        FacilityController.iFS.addRoom(ro);
+                        break;
+                    case 3:
+                        return;
+                    default:
+                        System.err.println("Nhập lại số từ 1 đến 3");
+                }
+            }catch (NumberFormatException e){
+                System.err.println("Nhập lại 1 số");
             }
+
+
         } while (true);
     }
 }

@@ -46,16 +46,36 @@ public class RWCustomer {
         }
         return customerList;
     }
-    public static void writeFile(List<Customer> customerList){
+    public static void writeFileAppend(List<Customer> customerList){
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
-             fileWriter = new FileWriter(FILE_PATH);
+             fileWriter = new FileWriter(FILE_PATH,true);
              bufferedWriter = new BufferedWriter(fileWriter);
              for (Customer customer : customerList){
                  bufferedWriter.write(customer.formatCSVCustomer());
                  bufferedWriter.newLine();
              }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void writeFileNotAppend(List<Customer> customerList){
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
+            fileWriter = new FileWriter(FILE_PATH);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Customer customer : customerList){
+                bufferedWriter.write(customer.formatCSVCustomer());
+                bufferedWriter.newLine();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }finally {

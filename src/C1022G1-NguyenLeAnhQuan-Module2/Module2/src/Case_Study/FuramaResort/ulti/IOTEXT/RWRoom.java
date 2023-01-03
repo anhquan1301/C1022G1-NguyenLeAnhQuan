@@ -47,7 +47,7 @@ public class RWRoom {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter(FILE_PATH);
+            fileWriter = new FileWriter(FILE_PATH,true);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (Map.Entry<Room, Integer> entry : roomMap.entrySet()) {
                 bufferedWriter.write(entry.getKey().formatRoomCSV() + "," + entry.getValue());

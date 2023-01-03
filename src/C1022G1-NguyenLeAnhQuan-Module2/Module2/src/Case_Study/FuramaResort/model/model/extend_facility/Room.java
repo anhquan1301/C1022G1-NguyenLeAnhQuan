@@ -31,7 +31,6 @@ public class Room extends Facility {
                 ", freeService='" + freeService + '\'' +
                 "} ";
     }
-
     public String formatRoomCSV(){
        final String COMMA = ",";
         return super.convertLineFacility()+COMMA+this.freeService;

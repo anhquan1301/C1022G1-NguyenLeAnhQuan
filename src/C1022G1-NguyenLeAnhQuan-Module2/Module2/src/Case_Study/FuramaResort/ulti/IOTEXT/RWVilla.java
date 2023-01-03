@@ -50,7 +50,7 @@ public class RWVilla {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter(FILE_PATH);
+            fileWriter = new FileWriter(FILE_PATH,true);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (Map.Entry<Villa,Integer> entry : villaMap.entrySet()){
                 bufferedWriter.write(entry.getKey().formatCSVVilla() + "," + entry.getValue());

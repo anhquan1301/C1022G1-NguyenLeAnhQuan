@@ -28,14 +28,15 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
 
     @Override
     public void addList(Object object) {
-        customerList = RWCustomer.readFile();
+        customerList.clear();
         Customer customer = (Customer) object;
         customerList.add(customer);
-        RWCustomer.writeFile(customerList);
+        RWCustomer.writeFileAppend(customerList);
     }
 
     @Override
     public Customer findById(String id) {
+        customerList = RWCustomer.readFile();
         for (int i=0; i<customerList.size();i++){
             if(customerList.get(i).getIdCustomer().equals(id)){
                 return customerList.get(i);
@@ -50,7 +51,7 @@ public class CustomerRepositoryIplm implements ICustomerRepository {
         for (int i = 0; i <customerList.size() ; i++) {
             if(customerList.get(i).getIdCustomer().equals(customer.getIdCustomer())){
                 customerList.set(i,customer);
-                RWCustomer.writeFile(customerList);
+                RWCustomer.writeFileNotAppend(customerList);
             }
         }
     }

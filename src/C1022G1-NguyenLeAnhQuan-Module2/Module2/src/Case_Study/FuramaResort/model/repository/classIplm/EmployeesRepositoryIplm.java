@@ -23,29 +23,26 @@ public class EmployeesRepositoryIplm implements IEmployeesRepository {
             System.out.println(employee);
         }
     }
-
-
     @Override
     public void addList(Object obj) {
-        employeesList = RWEmployee.readFile();
+        employeesList.clear();
         Employee employee = (Employee) obj;
         employeesList.add(employee);
-        RWEmployee.writerFile(employeesList);
+        RWEmployee.writerFileAppend(employeesList);
     }
-
     @Override
     public void deleteEmployees(String id) {
         employeesList = RWEmployee.readFile();
         for (int i=0;i<employeesList.size();i++){
             if (employeesList.get(i).getIdEmplyee().equals(id)){
                 employeesList.remove(employeesList.get(i));
-                RWEmployee.writerFile(employeesList);
+                RWEmployee.writerFileNotAppend(employeesList);
             }
         }
     }
-
     @Override
     public Employee findById(String id) {
+        employeesList = RWEmployee.readFile();
         for (int i=0; i<employeesList.size();i++){
             if(employeesList.get(i).getIdEmplyee().equals(id)){
                 return employeesList.get(i);
@@ -53,14 +50,13 @@ public class EmployeesRepositoryIplm implements IEmployeesRepository {
         }
         return null;
     }
-
     @Override
     public void updateInformation(Employee employee) {
         employeesList=RWEmployee.readFile();
         for (int i=0;i<employeesList.size();i++){
             if(employeesList.get(i).getIdEmplyee().equals(employee.getIdEmplyee())){
                 employeesList.set(i,employee);
-                RWEmployee.writerFile(employeesList);
+                RWEmployee.writerFileNotAppend(employeesList);
             }
         }
     }
