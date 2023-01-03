@@ -40,6 +40,7 @@ public class RWRoom {
                 e.printStackTrace();
             }
         }
+        
         return roomMap;
     }
     public static void writeFile(Map<Room,Integer> roomMap) {

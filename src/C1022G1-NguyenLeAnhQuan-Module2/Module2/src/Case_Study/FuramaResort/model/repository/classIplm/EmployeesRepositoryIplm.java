@@ -9,13 +9,12 @@ import java.util.List;
 
 public class EmployeesRepositoryIplm implements IEmployeesRepository {
     private static List<Employee> employeesList = new ArrayList<>();
-    static {
 
-
-        employeesList.add(new Employee("1","Nguyễn Lê Anh Q", "13/01/1990","Nam","201838822","0909999999","nlaquan1301@gmail.com","Đại học","Giám Đốc","5000"));
-        employeesList.add(new Employee("2","Nguyễn Văn B", "15/11/1995","Nam","201885769","0909911252","abcd@gmail.com","Trung cấp","Lễ Tân","250"));
-        employeesList.add(new Employee("3","Nguyễn Văn C", "11/09/1999","Nam","201736495","0909234554","abcd123@gmail.com","Cao Đẳng","Quản Lí","600"));
-    }
+//    static {
+//        employeesList.add(new Employee("1","Nguyễn Lê Anh Q", "13/01/1990","Nam","201838822","0909999999","nlaquan1301@gmail.com","Đại học","Giám Đốc","5000"));
+//        employeesList.add(new Employee("2","Nguyễn Văn B", "15/11/1995","Nam","201885769","0909911252","abcd@gmail.com","Trung cấp","Lễ Tân","250"));
+//        employeesList.add(new Employee("3","Nguyễn Văn C", "11/09/1999","Nam","201736495","0909234554","abcd123@gmail.com","Cao Đẳng","Quản Lí","600"));
+//    }
 
     @Override
     public void displayList() {

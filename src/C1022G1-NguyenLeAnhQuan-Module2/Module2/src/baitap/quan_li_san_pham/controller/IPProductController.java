@@ -10,7 +10,6 @@ public class IPProductController {
     private static IIPProductService productService = new IPProductServiceIplm();
 
     public static void main(String[] args) {
-
         do {
             Scanner sc = new Scanner(System.in);
             System.out.println("Quản lí sản phầm Iphone");
@@ -39,6 +38,33 @@ public class IPProductController {
                 case 2:
                     productService.display();
                     break;
+                case 3:
+                    System.out.println("Nhập mã sản phẩm cần xóa");
+                    String codeDelete = sc.nextLine();
+                    productService.delete(codeDelete);
+                    break;
+                case 4:
+                    System.out.println("Nhập mã sản phẩm cần thay đổi thông tin");
+                    String codeNew = sc.nextLine();
+                    IPProduct ipProduct1 = productService.findByCode(codeNew);
+                    if(ipProduct1!=null){
+                        System.out.println("Nhập tên mới của sản phẩm");
+                        String name1 = sc.nextLine();
+                        System.out.println("Nhập màu mới của sản phẩm");
+                        String color1 = sc.nextLine();
+                        System.out.println("Nhập loại mới của sản phẩm");
+                        String type1 = sc.nextLine();
+                        System.out.println("Nhập giá mới của sản phẩm");
+                        String price1 = sc.nextLine();
+                        ipProduct1.setNameProduct(name1);
+                        ipProduct1.setColor(color1);
+                        ipProduct1.setTypePhone(type1);
+                        ipProduct1.setPrice(price1);
+                        productService.editProduct(ipProduct1);
+                    }
+                    break;
+                default:
+                    System.err.println("Nhập lỗi");
             }
         }while (true);
     }

@@ -1,4 +1,4 @@
-package Case_Study.FuramaResort.ulti;
+package Case_Study.FuramaResort.ulti.regex;
 
 public class Validate {
     public static final String REGEX_SERVICE_CODE_VILLA = "^SVVL-[0-9]{4}$";

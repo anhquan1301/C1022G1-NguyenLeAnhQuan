@@ -10,14 +10,14 @@ import java.util.List;
 
 public class CustomerRepositoryIplm implements ICustomerRepository {
     private static List<Customer> customerList = new LinkedList<>();
-    static {
-        customerList.add(new Customer("1", "Nguyễn Lê Anh Quân", "13/01/2000", "Nam","201888881","0909999999",
-                "nlaq123@gmail.com", "Diamond", "678 Phạm Văn Đồng, Đà Nẵng"));
-        customerList.add(new Customer("2", "Lê Thị B", "18/04/1998", "Nữ","201834581","0909342999",
-                "mld33@gmail.com", "Gold", "123 Hoàng Diệu, Đà Nẵng"));
-        customerList.add(new Customer("3", "Trần Văn Đ", "24/01/1988", "Nam","201812381","0909839999",
-                "nek44@gmail.com", "Member", "222 Trưng Nữ Vương, Đà Nẵng"));
-    }
+//    static {
+//        customerList.add(new Customer("1", "Nguyễn Lê Anh Quân", "13/01/2000", "Nam","201888881","0909999999",
+//                "nlaq123@gmail.com", "Diamond", "678 Phạm Văn Đồng, Đà Nẵng"));
+//        customerList.add(new Customer("2", "Lê Thị B", "18/04/1998", "Nữ","201834581","0909342999",
+//                "mld33@gmail.com", "Gold", "123 Hoàng Diệu, Đà Nẵng"));
+//        customerList.add(new Customer("3", "Trần Văn Đ", "24/01/1988", "Nam","201812381","0909839999",
+//                "nek44@gmail.com", "Member", "222 Trưng Nữ Vương, Đà Nẵng"));
+//    }
     @Override
     public void displayList() {
        customerList = RWCustomer.readFile();

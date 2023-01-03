@@ -11,7 +11,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FacilityRepositoryIplm implements IFacilityRepository {
-    private static Map<Facility, Integer> facilityMap = new LinkedHashMap<>();
+
+    
+    private static Map<Villa, Integer> vM = new LinkedHashMap<>();
+    private static Map<Room, Integer> rM = new LinkedHashMap<>();
 //    static {
 //        facilityMap.put(new Room("SVRO-1234","Room402","100.0","200","2","Date", "FreeMassage"),5);
 //        facilityMap.put(new Room("SVRO-6789","Room301","150.0","350","4","Date","FreeBuffet"),3);
@@ -23,8 +26,8 @@ public class FacilityRepositoryIplm implements IFacilityRepository {
 //    }
     @Override
     public void displayList() {
-        Map<Villa,Integer> vM = RWVilla.readFile();
-        Map<Room, Integer> rM = RWRoom.readFile();
+        vM = RWVilla.readFile();
+        rM = RWRoom.readFile();
         System.out.println("List Facility");
         for (Map.Entry<Villa,Integer> entry: vM.entrySet()){
             if(entry.getValue()<5){
@@ -39,15 +42,17 @@ public class FacilityRepositoryIplm implements IFacilityRepository {
     }
     @Override
     public void addVilla(Villa villa) {
-        Map<Villa,Integer> vlMap = RWVilla.readFile();
-        vlMap.put(villa,0);
-        RWVilla.writeFile(vlMap);
+        RWVilla.readFile();
+        vM.put(villa,0);
+
+
+        RWVilla.writeFile(vM);
     }
     @Override
     public void addRoom(Room room) {
-        Map<Room,Integer> rMap = RWRoom.readFile();
-        rMap.put(room,0);
-        RWRoom.writeFile(rMap);
+        RWRoom.readFile();
+        rM.put(room,0);
+        RWRoom.writeFile(rM);
     }
     @Override
     public void addList(Object object) {
@@ -56,8 +61,8 @@ public class FacilityRepositoryIplm implements IFacilityRepository {
     }
     @Override
     public void displayListFacilityMaintenance() {
-        Map<Villa,Integer> vM = RWVilla.readFile();
-        Map<Room, Integer> rM = RWRoom.readFile();
+        vM = RWVilla.readFile();
+        rM = RWRoom.readFile();
         System.out.println("List Facility Maintenance");
         for (Map.Entry<Villa,Integer> entry: vM.entrySet()){
             if(entry.getValue()>=5){

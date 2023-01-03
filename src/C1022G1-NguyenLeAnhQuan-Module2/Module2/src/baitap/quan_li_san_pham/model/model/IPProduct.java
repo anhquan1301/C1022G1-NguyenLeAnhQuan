@@ -68,4 +68,8 @@ public class IPProduct {
                 ", price='" + price + '\'' +
                 '}';
     }
+    public String formatCSV(){
+        final String COMMA = ",";
+        return this.codeProduct+COMMA+this.nameProduct+COMMA+this.color+COMMA+this.typePhone+COMMA+this.price;
+    }
 }

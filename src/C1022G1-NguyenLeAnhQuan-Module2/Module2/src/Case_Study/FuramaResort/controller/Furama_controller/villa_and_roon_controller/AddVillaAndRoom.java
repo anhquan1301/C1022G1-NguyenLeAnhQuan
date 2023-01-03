@@ -1,11 +1,9 @@
 package Case_Study.FuramaResort.controller.Furama_controller.villa_and_roon_controller;
 
 import Case_Study.FuramaResort.controller.Furama_controller.FacilityController;
-import Case_Study.FuramaResort.model.model.Facility;
 import Case_Study.FuramaResort.model.model.extend_facility.Room;
 import Case_Study.FuramaResort.model.model.extend_facility.Villa;
-import Case_Study.FuramaResort.ulti.IOTEXT.RWVilla;
-import Case_Study.FuramaResort.ulti.Validate;
+import Case_Study.FuramaResort.ulti.regex.Validate;
 
 import java.util.Scanner;
 
