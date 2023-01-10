@@ -17,7 +17,7 @@ public class IPProductRepositoryIplm implements IIPProductRepository {
 
     @Override
     public void addProduct(IPProduct ipProduct) {
-        IOFIle.readFile();
+        ipProductList.clear();
         ipProductList.add(ipProduct);
         IOFIle.writeFile(ipProductList);
     }
@@ -32,6 +32,7 @@ public class IPProductRepositoryIplm implements IIPProductRepository {
 
     @Override
     public IPProduct findByCode(String codeProduct) {
+        ipProductList = IOFIle.readFile();
         for (int i=0; i<ipProductList.size();i++){
             if(ipProductList.get(i).getCodeProduct().equals(codeProduct)){
                 return ipProductList.get(i);
@@ -46,7 +47,7 @@ public class IPProductRepositoryIplm implements IIPProductRepository {
         for (int i=0;i<ipProductList.size();i++){
             if(ipProductList.get(i).getCodeProduct().equals(codeProduct)){
                 ipProductList.remove(ipProductList.get(i));
-                IOFIle.writeFile(ipProductList);
+                IOFIle.writeFile1(ipProductList);
             }
         }
     }
@@ -56,7 +57,7 @@ public class IPProductRepositoryIplm implements IIPProductRepository {
         for (int i=0; i<ipProductList.size();i++){
             if(ipProductList.get(i).getCodeProduct().equals(ipProduct.getCodeProduct())){
                 ipProductList.set(i,ipProduct);
-                IOFIle.writeFile(ipProductList);
+                IOFIle.writeFile1(ipProductList);
             }
         }
     }

@@ -40,6 +40,26 @@ public class IOFIle {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
+            fileWriter = new FileWriter(FILE_PATH,true);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (IPProduct ipProduct : ipProducts){
+                bufferedWriter.write(ipProduct.formatCSV());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void writeFile1(List<IPProduct> ipProducts){
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
             fileWriter = new FileWriter(FILE_PATH);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (IPProduct ipProduct : ipProducts){

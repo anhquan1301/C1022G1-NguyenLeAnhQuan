@@ -51,16 +51,23 @@ public class EmployeesController {
                         iES.addList(employee);
                         break;
                     case 3:
+
                         String idDelete;
                         do {
                             System.out.println("Nhập id cần xóa");
                             idDelete = sc.nextLine();
                             if(iES.findById(idDelete)!=null){
                                 iES.deleteEmployees(idDelete);
+                                break;
                             }else {
-                                throw new NotFoundException("Không tìm thấy id cần xóa");
+                                try {
+                                    throw new NotFoundException("Không tìm thấy id cần xóa");
+                                } catch (NotFoundException e) {
+                                    System.out.println(e.getMessage());
+                                }
                             }
-                        }while(true);
+                        }while (iES.findById(idDelete)==null);
+                        break;
                     case 4:
                         System.out.println("Nhập id nhân viên cần sủa thông tin");
                         String idFixed = sc.nextLine();
@@ -103,8 +110,6 @@ public class EmployeesController {
                 }
             }catch (NumberFormatException e){
                 System.err.println("Nhập lại 1 số");
-            } catch (NotFoundException e) {
-                System.err.println(e.getMessage());
             }
         }while (true);
     }

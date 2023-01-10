@@ -168,8 +168,6 @@ public class AddVillaAndRoom {
             }catch (NumberFormatException e){
                 System.err.println("Nhập lại 1 số");
             }
-
-
         } while (true);
     }
 }

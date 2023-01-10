@@ -42,6 +42,8 @@ public class FuramaController {
                         System.exit(0);
                         break;
                     default:
+
+
                         System.err.println("Nhập lại từ 1 đến 6");
                 }
             } catch (NumberFormatException e){
