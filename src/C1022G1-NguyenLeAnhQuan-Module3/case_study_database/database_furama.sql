@@ -1,5 +1,5 @@
-create schema casestudy_furama;
-use casestudy_furama;
+CREATE SCHEMA casestudy_furama;
+USE casestudy_furama;
 CREATE TABLE vi_tri (
     ma_vi_tri INT PRIMARY KEY,
     ten_vi_tri VARCHAR(50)
