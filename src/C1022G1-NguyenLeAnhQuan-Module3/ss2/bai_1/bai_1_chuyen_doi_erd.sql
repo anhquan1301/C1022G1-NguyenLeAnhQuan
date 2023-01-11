@@ -1,5 +1,5 @@
-create schema chuyen_doi_erd;
-use chuyen_doi_erd;
+CREATE SCHEMA chuyen_doi_erd;
+USE chuyen_doi_erd;
 CREATE TABLE phieu_xuat (
     so_phieu_xuat INT PRIMARY KEY,
     ngay_xuat DATE
@@ -63,4 +63,4 @@ CREATE TABLE chi_tiet_don_dat_hang (
         REFERENCES don_dat_hang (so_dat_hang)
 );
 
-drop schema chuyen_doi_erd;
+DROP SCHEMA chuyen_doi_erd;

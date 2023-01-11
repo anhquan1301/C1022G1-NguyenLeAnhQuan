@@ -1,6 +1,5 @@
-create schema product_manager;
-use product_manager;
-drop schema product_manager;
+CREATE SCHEMA product_manager;
+USE product_manager;
 CREATE TABLE customer (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(50),
