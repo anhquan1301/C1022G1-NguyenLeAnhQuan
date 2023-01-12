@@ -1,5 +1,5 @@
-CREATE SCHEMA chuyen_doi_erd;
-USE chuyen_doi_erd;
+CREATE SCHEMA quan_li_vat_tu;
+USE quan_li_vat_tu;
 CREATE TABLE phieu_xuat (
     so_phieu_xuat INT PRIMARY KEY,
     ngay_xuat DATE
@@ -40,8 +40,7 @@ CREATE TABLE nha_cung_cap (
     dia_chi VARCHAR(50)
 );
 CREATE TABLE so_dien_thoai (
-    ma_so_dien_thoai INT PRIMARY KEY,
-    so_dien_thoai VARCHAR(50),
+    so_dien_thoai VARCHAR(50) PRIMARY KEY,
     ma_nha_cung_cap INT,
     FOREIGN KEY (ma_nha_cung_cap)
         REFERENCES nha_cung_cap (ma_nha_cung_cap)
@@ -62,5 +61,3 @@ CREATE TABLE chi_tiet_don_dat_hang (
     FOREIGN KEY (so_dat_hang)
         REFERENCES don_dat_hang (so_dat_hang)
 );
-
-DROP SCHEMA chuyen_doi_erd;
