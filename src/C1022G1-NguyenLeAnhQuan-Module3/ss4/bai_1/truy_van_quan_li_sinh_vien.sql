@@ -30,3 +30,4 @@ FROM
     mark ON student.student_id = mark.student_id
 GROUP BY student.student_id
 ORDER BY AVG(mark) DESC;
+
