@@ -25,7 +25,7 @@ WHERE
 SELECT 
     khach_hang.ma_khach_hang,
     ho_ten,
-    COUNT(khach_hang.ma_khach_hang) 'Số lần đặt phòng'
+    COUNT(hop_dong.ma_khach_hang) so_lan_dat_phong
 FROM
     khach_hang
         JOIN
@@ -34,8 +34,8 @@ FROM
     loai_khach ON loai_khach.ma_loai_khach = khach_hang.ma_loai_khach
 WHERE
     ten_loai_khach = 'Diamond'
-GROUP BY khach_hang.ma_khach_hang
-ORDER BY COUNT(khach_hang.ma_khach_hang);
+GROUP BY hop_dong.ma_khach_hang
+ORDER BY so_lan_dat_phong;
 -- 5.	Hiển thị ma_khach_hang, ho_ten, ten_loai_khach, ma_hop_dong, ten_dich_vu, ngay_lam_hop_dong, ngay_ket_thuc, 
 -- tong_tien (Với tổng tiền được tính theo công thức như sau: Chi Phí Thuê + Số Lượng * Giá, 
 -- với Số Lượng và Giá là từ bảng dich_vu_di_kem, hop_dong_chi_tiet) cho tất cả các khách hàng đã từng đặt phòng. 
@@ -53,15 +53,15 @@ SELECT
             0))) 'Tổng tiền'
 FROM
     khach_hang
-        JOIN
+        LEFT JOIN
     loai_khach ON loai_khach.ma_loai_khach = khach_hang.ma_loai_khach
-        JOIN
+        LEFT JOIN
     hop_dong ON hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
-        JOIN
+        LEFT JOIN
     dich_vu ON dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
-        JOIN
+        LEFT JOIN
     hop_dong_chi_tiet ON hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
-        JOIN
+        LEFT JOIN
     dich_vu_di_kem ON dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
-GROUP BY khach_hang.ma_khach_hang
+GROUP BY ma_hop_dong , khach_hang.ma_khach_hang
 ORDER BY khach_hang.ma_khach_hang;
