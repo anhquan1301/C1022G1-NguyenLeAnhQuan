@@ -58,12 +58,12 @@ end // delimiter;
 call information_products();
 -- Tạo store procedure thêm một sản phẩm mới
 delimiter // create procedure add_products(
-  product_code varchar(45), 
-  product_name varchar(45), 
-  product_price varchar(45), 
-  product_amount varchar(45), 
-  product_description varchar(45), 
-  product_status varchar(45)
+  product_code varchar(50), 
+  product_name varchar(50), 
+  product_price int, 
+  product_amount int, 
+  product_description varchar(50), 
+  product_status varchar(50)
 ) begin insert into products(
   product_code, product_name, product_price, 
   product_amount, product_description, 
@@ -110,4 +110,4 @@ delete from
 where 
   products.id = id;
 end // delimiter;
-call delete_by_id(4);
+call delete_by_id(3);
