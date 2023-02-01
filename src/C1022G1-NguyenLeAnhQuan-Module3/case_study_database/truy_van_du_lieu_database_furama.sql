@@ -178,7 +178,7 @@ having so_luong_dich_vu_chi_tiet = (select max(so_luong) from hop_dong_chi_tiet)
 -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
 -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
 set sql_mode=(select replace(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
-select hd.ma_hop_dong,ten_loai_dich_vu,ten_dich_vu_di_kem, count(hdct.ma_hop_dong_chi_tiet) so_lan_su_dung
+select hd.ma_hop_dong,ten_loai_dich_vu,ten_dich_vu_di_kem, count(hdct.ma_dich_vu_di_kem) so_lan_su_dung
 from hop_dong hd
 join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
 join loai_dich_vu ldv on ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
