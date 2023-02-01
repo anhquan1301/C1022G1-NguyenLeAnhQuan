@@ -3,32 +3,34 @@ package baitap.giai_thuat;
 import java.util.*;
 
 public class abc {
-    public static void main(String[] args) {
-       String a = "abcc";
-        String arr[] = a.split("");
-        Arrays.sort(arr);
-        List<String> list1 = new ArrayList<>();
-        List<String> list2 = new ArrayList<>();
-        for (int i = 0; i <arr.length-1 ; i++) {
-            if(arr[i].equals(arr[i+1])){
-                list1.add(arr[i]);
-            }
-        }
-        for (int i = 0; i <list1.size()-1; i++) {
-                if (!list1.get(i).equals(list1.get(i + 1))) {
-                    list2.add(list1.get(i));
-                }
-            }
-        if(list2.size()!=0){
-            list2.add(list1.get(list1.size()-1));
-        } else if(list1.size()==1){
-            list2.add(list1.get(0));
-        }
-        String arr2[] = new String[list2.size()];
-        for (int i = 0; i <list2.size() ; i++) {
-            arr2[i] = list2.get(i);
-        }
-        System.out.println(Arrays.toString(arr2));
+//    public static void main(String[] args) {
+//        String a = "congratulations";
+//        String arr[] = a.split("");
+//        Arrays.sort(arr);
+//        List<String> list1 = new ArrayList<>();
+//        List<String> list2 = new ArrayList<>();
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            if (arr[i].equals(arr[i + 1])) {
+//                list1.add(arr[i]);
+//            }
+//        }
+//        for (int i = 0; i < list1.size() - 1; i++) {
+//            if (!list1.get(i).equals(list1.get(i + 1))) {
+//                list2.add(list1.get(i));
+//            }
+//        }
+//        if (list2.size() != 0) {
+//            list2.add(list1.get(list1.size() - 1));
+//        } else if (list1.size() == 1) {
+//            list2.add(list1.get(0));
+//        }
+//        char arr2[] = new char[list2.size()];
+//        for (int i = 0; i < list2.size(); i++) {
+//            arr2[i] = list2.get(i).toCharArray()[0];
+//        }
+//        System.out.println(arr2);
+//    }
+//}
 //        String arr2[] = new String[arr.length-list.size()];
 //        int count =0;
 //        for (int i = 0; i <arr.length ; i++) {
@@ -70,28 +72,28 @@ public class abc {
 //             arr3[i] = arr2[i].toCharArray()[0];
 //        }
 //        System.out.println(arr3);
-    }
-}
-//    public static void main(String[] args) {
-//        String arg1="abcbcde";
-//        char[] arr = new char[arg1.length()];
-//        int count = 0;
-//
-//        for (int i = 0; i < arg1.length(); i++) {
-//            char currentChar = arg1.charAt(i);
-//            int charCount = 0;
-//            for (int j = i + 1; j < arg1.length(); j++) {
-//                if (currentChar == arg1.charAt(j)) {
-//                charCount++;
-//                }
-//            }
-//            if (charCount > 0) {
-//            arr[count] = currentChar;
-//            count++;
-//            }
-//        }
-//        System.out.println(arr);
 //    }
 //}
+    public static void main(String[] args) {
+        String arg1="abdcef";
+        char[] arr = new char[arg1.length()];
+        int count = 0;
 
+        for (int i = 0; i < arg1.length(); i++) {
+            char currentChar = arg1.charAt(i);
+            int charCount = 0;
+            for (int j = i + 1; j < arg1.length(); j++) {
+                if (currentChar == arg1.charAt(j)) {
+                charCount++;
+                }
+            }
+            if (charCount > 0) {
+            arr[count] = currentChar;
+            count++;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+//
 
