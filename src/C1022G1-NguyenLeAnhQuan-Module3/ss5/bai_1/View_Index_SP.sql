@@ -55,7 +55,7 @@ select
 from 
   products;
 end // delimiter;
-call information_products();
+call information_products;
 -- Tạo store procedure thêm một sản phẩm mới
 delimiter // create procedure add_products(
   product_code varchar(50), 
