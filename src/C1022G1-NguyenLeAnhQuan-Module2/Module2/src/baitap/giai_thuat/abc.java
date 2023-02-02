@@ -3,8 +3,8 @@ package baitap.giai_thuat;
 import java.util.*;
 
 public class abc {
-//    public static void main(String[] args) {
-//        String a = "congratulations";
+    public static void main(String[] args) {
+//        String a = "abbbcddceff";
 //        String arr[] = a.split("");
 //        Arrays.sort(arr);
 //        List<String> list1 = new ArrayList<>();
@@ -29,8 +29,6 @@ public class abc {
 //            arr2[i] = list2.get(i).toCharArray()[0];
 //        }
 //        System.out.println(arr2);
-//    }
-//}
 //        String arr2[] = new String[arr.length-list.size()];
 //        int count =0;
 //        for (int i = 0; i <arr.length ; i++) {
@@ -74,26 +72,43 @@ public class abc {
 //        System.out.println(arr3);
 //    }
 //}
-    public static void main(String[] args) {
-        String arg1="abdcef";
-        char[] arr = new char[arg1.length()];
-        int count = 0;
-
-        for (int i = 0; i < arg1.length(); i++) {
-            char currentChar = arg1.charAt(i);
-            int charCount = 0;
-            for (int j = i + 1; j < arg1.length(); j++) {
-                if (currentChar == arg1.charAt(j)) {
-                charCount++;
+//    public static void main(String[] args) {
+//        String arg1="abdcef";
+//        char[] arr = new char[arg1.length()];
+//        int count = 0;
+//
+//        for (int i = 0; i < arg1.length(); i++) {
+//            char currentChar = arg1.charAt(i);
+//            int charCount = 0;
+//            for (int j = i + 1; j < arg1.length(); j++) {
+//                if (currentChar == arg1.charAt(j)) {
+//                charCount++;
+//                }
+//            }
+//            if (charCount > 0) {
+//            arr[count] = currentChar;
+//            count++;
+//            }
+//        }
+//        System.out.println(Arrays.toString(arr));
+        String s = "abbbcddceff";
+        List<Character> characterList = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i+1; j < s.length(); j++) {
+                if(s.charAt(i) == s.charAt(j)){
+                    if(!characterList.contains(s.charAt(j))){
+                        characterList.add(s.charAt(j));
+                    }
+                    break;
                 }
             }
-            if (charCount > 0) {
-            arr[count] = currentChar;
-            count++;
-            }
         }
-        System.out.println(Arrays.toString(arr));
+        char[] chars = new char[characterList.size()];
+        for (int i = 0; i < characterList.size(); i++) {
+            chars[i] = characterList.get(i);
+        }
+        System.out.println(chars);
     }
 }
-//
+
 

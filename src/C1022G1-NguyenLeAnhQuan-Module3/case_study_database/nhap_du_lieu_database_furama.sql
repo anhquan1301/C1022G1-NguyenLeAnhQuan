@@ -51,7 +51,6 @@ insert into dich_vu (ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu
 ('Villa No Beach Front', 22000, 9000000, 8, 'normal', 'Có hồ bơi', 300, 3, null, 3, 1),
 ('House Princess 02', 10000, 4000000, 5, 'normal', 'Có thêm bếp nướng', null, 2, null, 3, 2),
 ('Room Twin 02', 3000, 900000, 2, 'normal', 'Có tivi', null, null, '1 Xe máy', 4, 3);
-
 -- Dịch vụ đi kèm
 insert into dich_vu_di_kem (ten_dich_vu_di_kem, gia, don_vi, trang_thai) values 
 ('Karaoke', 10000, 'giờ', 'tiện nghi, hiện tại'),
@@ -77,4 +76,3 @@ insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vi
 -- Hợp đồng chi tiết
 insert into hop_dong_chi_tiet (so_luong, ma_hop_dong, ma_dich_vu_di_kem) values 
 (5, 2, 4),(8, 2, 5),(15, 2, 6),(1, 3, 1),(11, 3, 2),(1, 1, 3),(2, 1, 2),(2, 12, 2);
-
