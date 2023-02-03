@@ -1,0 +1,19 @@
+.bold{
+    font-weight: bold;
+}
+.color-deepskyblue{
+    color: deepskyblue;
+}
+.color-darkblue{
+    color: darkblue;
+}
+h1{
+    margin: 15px;
+}
+p{
+    text-indent: 40px;
+    margin: 15px;
+}
+hr{
+    margin: 15px;
+}

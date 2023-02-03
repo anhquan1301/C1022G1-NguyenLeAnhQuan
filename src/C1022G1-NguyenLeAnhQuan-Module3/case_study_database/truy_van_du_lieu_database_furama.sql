@@ -268,7 +268,7 @@ WHERE
 -- select ho_ten from nhan_vien
 -- 17.Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, 
 -- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 1.000.000 VNĐ.
-CREATE VIEW v_tong_tien AS
+CREATE VIEW view_tong_tien AS
     SELECT 
         kh.ma_khach_hang,
         lk.ten_loai_khach,
