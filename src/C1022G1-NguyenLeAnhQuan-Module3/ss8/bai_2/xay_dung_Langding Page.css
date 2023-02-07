@@ -3,13 +3,37 @@
     margin: 0;
     padding: 0;
     font-family: Arial;
+    font-size: 14px;
+}
+.row::after{
+    display: block;
+    clear: both;
+    content: "";
 }
 a{
     text-decoration: none;
     color: black;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 a:hover{
     text-decoration: underline;
     border-color: black;
+}
+i{
+    margin-right: 10px;
+}
+.bg-row2{
+    background-color: #F2F2F2;
+}
+h1{
+    position: relative;
+    bottom: 812px;
+    font-size: 90px;
+    text-indent: 70px;
+}
+h3{
+    position: relative;
+    bottom: 800px;
+    font-size: 25px;
+    text-indent: 70px;
 }
