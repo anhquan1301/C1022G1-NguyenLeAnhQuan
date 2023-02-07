@@ -19,6 +19,7 @@
 .col-12 {width: 100%;}
 [class*="col-"]{
     float: left;
+
     padding: 5px;
 }.row::after{
      display: block;
