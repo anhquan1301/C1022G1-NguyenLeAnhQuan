@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-3">
-                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active text-white" aria-current="page" href="">Home</a>
                 </li>
                 <li class="nav-item mx-3">
                     <a class="nav-link text-white" href="#">Playlist</a>
@@ -77,15 +77,15 @@
                     <img src="https://photo2.tinhte.vn/data/attachment-files/2020/12/5276686_cover.jpg" class="d-block w-100 h-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://m.media-amazon.com/images/I/61dKZra+lKL.jpg" class="d-block w-100" alt="...">
+                    <img src="https://www.teahub.io/photos/full/276-2764105_adele-hello.jpg" class="d-block w-100 h-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon prev" aria-hidden="true"></span>
+                <span class="visually-hidden ">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon next" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
