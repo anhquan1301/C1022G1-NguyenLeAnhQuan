@@ -103,9 +103,15 @@
                     class="card-img" alt="...">
             </a>
         </div>
+        <div class="card bg-dark text-white mt-3">
+            <a href="#"><img
+                    src="https://avatar-ex-swe.nixcdn.com/topic/mobile/2020/06/09/3/2/9/5/1591687218247_org.jpg"
+                    class="card-img" alt="...">
+            </a>
+        </div>
     </div>
     <%--  ROW 2 COL-9 SLIDE  --%>
-    <div class="col-lg-9 back-ground-grey2 p-0" style="height: 705px;">
+    <div class="col-lg-9 back-ground-grey2 p-0">
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -162,12 +168,13 @@
                         aria-label="Slide 5"></button>
             </div>
         </div>
-        <div class="text-white mt-2">
-            <ul>
+        <div class="text-white">
+            <ul class="pt-4 m-0">
                 <li class="d-inline ms-4 rounded ">
                     <a href="#"><img style="width: 150px; height: 150px"
                                      src="https://upload.wikimedia.org/wikipedia/vi/f/f1/Adele_21.jpg"
-                                     class="rounded-circle" alt="..."></a></li>
+                                     class="rounded-circle" alt="..."></a>
+                </li>
                 <li class="d-inline ms-5">
                     <a href="#"><img style="width: 150px; height: 150px"
                                      src="https://yt3.googleusercontent.com/ytc/AL5GRJWbn33QSMgvUbsu6faw1pxXz5jX7SVtCk7kWfhepA=s900-c-k-c0x00ffffff-no-rj"
