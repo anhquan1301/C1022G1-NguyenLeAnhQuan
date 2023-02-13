@@ -43,4 +43,23 @@ public class ProductsRepository implements IProductsRepository {
             }
         }
     }
+
+    @Override
+    public void delete(Products products) {
+        for (int i = 0; i <productsList.size() ; i++) {
+            if(productsList.get(i).getId()==products.getId()){
+                productsList.remove(productsList.get(i));
+            }
+        }
+    }
+
+    @Override
+    public Products search(String name) {
+        for (int i = 0; i <productsList.size() ; i++) {
+            if (productsList.get(i).getName().contains(name)){
+                return productsList.get(i);
+            }
+        }
+        return null;
+    }
 }

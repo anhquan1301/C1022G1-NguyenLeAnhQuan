@@ -12,28 +12,24 @@
 </head>
 <body>
 <h2>Cập nhật thông tin sản phẩm</h2>
-<form action="">
+<form action="" method="post">
     <div class="form-group">
-        <label for="idUpDate">Nhập id sản phẩm</label>
-        <input type="text" name="idUpDate" id="idUpDate" class="form-control">
+        <label for="name">Tên sản phẩm</label>
+        <input type="text" name="name" id="name" value="${products.name}">
     </div>
     <div class="form-group">
-        <label for="nameUpDate">Nhập tên cần sửa</label>
-        <input type="text" name="nameUpDate" id="nameUpDate" class="form-control">
+        <label for="price">Giá sản phẩm</label>
+        <input type="text" name="price" id="price" value="${products.price}">
     </div>
     <div class="form-group">
-        <label for="priceUpDate">Nhập giá cần sửa</label>
-        <input type="text" name="priceUpDate" id="priceUpDate" class="form-control">
+        <label for="decription">Mô tả sản phẩm</label>
+        <input type="text" name="decription" id="decription" value="${products.decription}">
     </div>
     <div class="form-group">
-        <label for="decripUpDate">Nhập mô tả sản phẩm cần sửa</label>
-        <input type="text" name="decripUpDate" id="decripUpDate" class="form-control">
+        <label for="producer">Nhà sản xuất</label>
+        <input type="text" name="producer" id="producer" value="${products.producer}">
     </div>
-    <div class="form-group">
-        <label for="producerUpDate">Nhập nhà sản xuất cần sửa</label>
-        <input type="text" name="producerUpDate" id="producerUpDate" class="form-control">
-    </div>
-    <input type="submit" value="Cập nhật thông tin">
+    <input type="submit" value="Thêm mới sản phẩm">
 </form>
 </body>
 </html>
