@@ -88,7 +88,7 @@ public class ProductsServlet extends HttpServlet {
             products.setDecription(decription);
             products.setProducer(producer);
             iProductsService.update(products);
-            request.setAttribute("products",products);
+//            request.setAttribute("products",products);
             try {
                 response.sendRedirect("/products");
             } catch (IOException e) {

@@ -15,7 +15,7 @@
 <form action="" method="post">
     <h3>Xóa sản phẩm</h3>
             <td><input type="submit" value="Xóa sản phẩm"></td>
-            <td><a class="btn btn-danger" href="/customers">Hủy</a></td>
+            <td><a class="btn btn-danger" href="/products">Hủy</a></td>
         </tr>
     </table>
 </form>
