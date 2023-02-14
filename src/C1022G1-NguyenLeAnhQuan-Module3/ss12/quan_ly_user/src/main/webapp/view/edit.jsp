@@ -14,6 +14,9 @@
 <h2>Chỉnh sửa thông tin người dùng</h2>
 <form action="" method="post">
     <div class="form-group">
+        <input type="hidden" name="id">
+    </div>
+    <div class="form-group">
         <label for="name">Tên</label>
         <input type="text" name="name" id="name" value="${user.name}">
     </div>

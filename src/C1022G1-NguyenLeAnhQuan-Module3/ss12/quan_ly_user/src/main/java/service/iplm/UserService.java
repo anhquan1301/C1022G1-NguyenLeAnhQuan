@@ -29,4 +29,9 @@ public class UserService implements IUserService {
     public void edit(User user) {
         iUserRepository.edit(user);
     }
+
+    @Override
+    public boolean delete(int id) {
+       return iUserRepository.delete(id);
+    }
 }

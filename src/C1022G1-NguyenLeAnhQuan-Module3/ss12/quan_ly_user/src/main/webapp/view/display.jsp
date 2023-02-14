@@ -1,4 +1,3 @@
-
 <%--
   Created by IntelliJ IDEA.
   User: nlaqu
@@ -15,31 +14,61 @@
 </head>
 <body>
 <h2 class="text-center">Thông tin người sử dụng</h2>
-    <table class="table table-striped">
-        <thead>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Email</th>
+        <th>Quốc gia</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${displayList}" var="user" varStatus="loop">
         <tr>
-            <th>ID</th>
-            <th>Tên</th>
-            <th>Email</th>
-            <th>Quốc gia</th>
-            <th></th>
-            <th></th>
+            <td>${loop.count}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.country}</td>
+            <td><a class="btn btn-primary" href="/user?action=edit&id=${user.id}">Chỉnh sửa</a></td>
+            <td>
+                <button onclick="modalDelete('${user.id}','${user.name}')" type="button" class="btn btn-danger"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">Xóa</button>
+            </td>
         </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${displayList}" var="user" varStatus="loop">
-            <tr>
-                <td>${loop.count}</td>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-                <td>${user.country}</td>
-                <td><a class="btn btn-primary" href="/user?action=edit&id=${user.id}">Chỉnh sửa</a></td>
-                <td><a class="btn btn-danger" href="/user?action=delete&id=${user.id}">Xóa</a></td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+    </c:forEach>
+    </tbody>
+</table>
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa người sử dụng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/user?action=delete" method="post">
+                <div class="modal-body">
+                    <label for="id"></label><input type="text" hidden id="id" name="id">
+                    Bạn có muốn xóa <span id="name" style="color: brown; font-weight: bold"></span>
+                    không ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Xóa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <a class="btn btn-dark" href="/user?action=create">Thêm người dùng mới</a>
 <script url="\js\bootstrap.js"></script>
+<script>
+    function modalDelete(id, name) {
+        document.getElementById("id").value = id;
+        document.getElementById("name").innerText = name;
+    }
+</script>
 </body>
 </html>

@@ -68,13 +68,28 @@ public class UserReposiroty implements IUserRepository {
     @Override
     public void edit(User user) {
         try {
-            PreparedStatement preparedStatement = BaseRepository.getConnection().prepareStatement("UPDATE users set name = ?, email = ?, country = ? where id = ?");
+            PreparedStatement preparedStatement = BaseRepository.getConnection()
+            .prepareStatement("UPDATE users set name = ?, email = ?, country = ? where id = ?");
             preparedStatement.setString(1,user.getName());
             preparedStatement.setString(2,user.getEmail());
             preparedStatement.setString(3,user.getCountry());
+            preparedStatement.setInt(4,user.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    @Override
+    public boolean delete(int id) {
+        try {
+            PreparedStatement preparedStatement = BaseRepository.getConnection().prepareStatement("delete from users where id = ?");
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+            return preparedStatement.executeUpdate()>0;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
     }
 }

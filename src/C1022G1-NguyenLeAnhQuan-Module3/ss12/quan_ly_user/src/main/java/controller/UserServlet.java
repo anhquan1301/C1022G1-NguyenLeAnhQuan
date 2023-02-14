@@ -15,6 +15,8 @@ import java.io.IOException;
 public class UserServlet extends HttpServlet {
     private IUserService iUserService = new UserService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         String action = request.getParameter("action");
         if (action==null){
             action = "";
@@ -26,11 +28,15 @@ public class UserServlet extends HttpServlet {
             case "edit":
                 edit(request,response);
                 break;
+            case "delete":
+                delete(request,response);
+                break;
             default:
         }
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         String action = request.getParameter("action");
         if (action==null){
             action = "";
@@ -78,10 +84,10 @@ public class UserServlet extends HttpServlet {
     }
     private void edit(HttpServletRequest request, HttpServletResponse response){
         int id = Integer.parseInt(request.getParameter("id"));
-        User user = iUserService.findById(id);
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
+        User user = iUserService.findById(id);
         if(user==null){
             request.getRequestDispatcher("error-404.jsp");
         }else {
@@ -89,7 +95,6 @@ public class UserServlet extends HttpServlet {
             user.setEmail(email);
             user.setCountry(country);
             iUserService.edit(user);
-            request.setAttribute("user",user);
             try {
                 response.sendRedirect("/user");
             } catch (IOException e) {
@@ -112,5 +117,20 @@ public class UserServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
+    }
+    private void delete(HttpServletRequest request, HttpServletResponse response){
+        int id = Integer.parseInt(request.getParameter("id"));
+        boolean check = iUserService.delete(id);
+        String message = "Không thành công";
+        if(check){
+            message = "Xóa thành công";
+        }
+        request.setAttribute("message",message);
+        display(request,response);
+//        try {
+//            response.sendRedirect("/user");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }
