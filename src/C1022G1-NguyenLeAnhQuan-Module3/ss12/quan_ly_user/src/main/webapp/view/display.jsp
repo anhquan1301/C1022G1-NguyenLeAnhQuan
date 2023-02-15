@@ -14,6 +14,23 @@
 </head>
 <body>
 <h2 class="text-center">Thông tin người sử dụng</h2>
+<p>${message}</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6"><a class="btn btn-dark" href="/user?action=create">Thêm người dùng mới</a></div>
+        <div class="col-6">
+            <form action="/user" method="get">
+                <div class="form-group float-start w-75">
+                    <input type="text" name="search" id="search" value="${search}" class="form-control" placeholder="Nhập tên quốc gia người dùng">
+                    <input hidden type="text" name="action" value="search" class="form-control">
+                </div>
+                <div class="float-start w-25">
+                    <input class="btn btn-primary" type="submit" value="Search">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <table class="table table-striped">
     <thead>
     <tr>
@@ -34,18 +51,21 @@
             <td>${user.country}</td>
             <td><a class="btn btn-primary" href="/user?action=edit&id=${user.id}">Chỉnh sửa</a></td>
             <td>
-                <button onclick="modalDelete('${user.id}','${user.name}')" type="button" class="btn btn-danger"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">Xóa</button>
+                <button onclick="modalDelete('${user.id}','${user.name}')" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Xóa
+                </button>
             </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<a class="btn btn-light" href="/user?action=sort">Sắp xếp theo tên</a>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Xóa người sử dụng</h5>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="/user?action=delete" method="post">
@@ -62,8 +82,7 @@
         </div>
     </div>
 </div>
-<a class="btn btn-dark" href="/user?action=create">Thêm người dùng mới</a>
-<script url="\js\bootstrap.js"></script>
+<script src="\js\bootstrap.js"></script>
 <script>
     function modalDelete(id, name) {
         document.getElementById("id").value = id;

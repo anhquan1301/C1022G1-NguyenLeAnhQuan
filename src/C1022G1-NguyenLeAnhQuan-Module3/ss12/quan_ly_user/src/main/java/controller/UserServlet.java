@@ -48,6 +48,11 @@ public class UserServlet extends HttpServlet {
             case "edit":
                 editForm(request,response);
                 break;
+            case "search":
+                search(request,response);
+                break;
+            case "sort":
+                sort(request,response);
             default:
                 display(request,response);
         }
@@ -121,16 +126,38 @@ public class UserServlet extends HttpServlet {
     private void delete(HttpServletRequest request, HttpServletResponse response){
         int id = Integer.parseInt(request.getParameter("id"));
         boolean check = iUserService.delete(id);
-        String message = "Không thành công";
+        String message = "Xóa thành công";
         if(check){
-            message = "Xóa thành công";
+            message = "Xóa không thành công";
         }
         request.setAttribute("message",message);
         display(request,response);
 //        try {
 //            response.sendRedirect("/user");
 //        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+//        e.printStackTrace();
+//    }
+}
+    private void search(HttpServletRequest request, HttpServletResponse response){
+        String search = request.getParameter("search");
+        request.setAttribute("search",search);
+        request.setAttribute("displayList",iUserService.search(search));
+        try {
+            request.getRequestDispatcher("/view/display.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void sort(HttpServletRequest request, HttpServletResponse response){
+        request.setAttribute("displayList",iUserService.sort());
+        try {
+            request.getRequestDispatcher("/view/display.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
