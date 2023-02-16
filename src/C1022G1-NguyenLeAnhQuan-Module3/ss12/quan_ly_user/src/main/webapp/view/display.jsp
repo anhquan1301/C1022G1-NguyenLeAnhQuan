@@ -86,7 +86,8 @@
 <script>
     function modalDelete(id, name) {
         document.getElementById("id").value = id;
-        document.getElementById("name").innerText = name;
+        document.getElementById("name"
+        ).innerText = name;
     }
 </script>
 </body>
