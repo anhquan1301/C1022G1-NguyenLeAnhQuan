@@ -266,7 +266,7 @@ WHERE
     WHERE
         YEAR(ngay_lam_hop_dong) BETWEEN 2019 AND 2021);
 -- select ho_ten from nhan_vien
--- 17.Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, 
+-- 17.Cập nhật thông tin những khách hàng có ten_loai_khach từ Platininum lên Diamond, 
 -- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 1.000.000 VNĐ.
 CREATE VIEW view_tong_tien AS
     SELECT 
@@ -361,3 +361,4 @@ UNION ALL SELECT
     dia_chi
 FROM
     khach_hang
+    

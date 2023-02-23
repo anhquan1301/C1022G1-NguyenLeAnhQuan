@@ -46,6 +46,7 @@
     <c:forEach items="${displayList}" var="user" varStatus="loop">
         <tr>
             <td>${loop.count}</td>
+
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.country}</td>
