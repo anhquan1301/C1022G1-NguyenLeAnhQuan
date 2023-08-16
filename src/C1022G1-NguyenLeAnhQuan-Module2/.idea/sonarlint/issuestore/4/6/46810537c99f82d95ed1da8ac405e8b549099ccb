@@ -1,0 +1,9 @@
+
+s	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK8¨òìýž1
+s	java:S127!"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK8©òìýž1
+G
+java:S1197"*Move the array designators [] to the type.(»œ‡’8ãšåýž1
+]	java:S125	"<This block of commented-out lines of code should be removed.(Œ„Îßøÿÿÿÿ8Õ¾ìýž1
+D
+java:S1481"'Remove this unused "rs" local variable.(§—Í¶8Ùóìýž1
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(æ¨¤šøÿÿÿÿ8Þóìýž1

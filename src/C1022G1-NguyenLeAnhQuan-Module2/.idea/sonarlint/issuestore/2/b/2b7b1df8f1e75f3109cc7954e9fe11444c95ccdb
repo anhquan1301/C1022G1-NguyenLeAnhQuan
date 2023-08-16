@@ -1,0 +1,10 @@
+
+t	java:S127""XRefactor the code in order to not assign to this loop counter from within the loop body.(´™ß×8 ùÀá›1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(Çµí‘8°ù¼á›1
+]	java:S125
+"<This block of commented-out lines of code should be removed.(¡Âðøÿÿÿÿ8ßå½á›1
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(”åôù8¹ù¼á›1
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿ8æå½á›1
+T
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓþÿÿÿÿ8’Š™Ÿ1

@@ -1,0 +1,23 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(£ˆ¬Û8¬ğÆâ™1
+D
+java:S2189""Add an end condition to this loop.(ü§è½ùÿÿÿÿ8ÈğÆâ™1
+A
+java:S3010"Remove this assignment of "ip".(Ó‚Şƒüÿÿÿÿ8ÿ¢Èâ™1
+W
+java:S2209"5Change this instance-reference to a static reference.(Ó‚Şƒüÿÿÿÿ8ÿ€Éâ™1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¡àÇ¡øÿÿÿÿ8ÒğÆâ™1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ú•€Ë8ÒğÆâ™1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(©ŠÉ¸8ÒğÆâ™1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(–¨°‡8ÓğÆâ™1
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(÷–¯Äûÿÿÿÿ8ÓğÆâ™1
+U	java:S106""9Replace this use of System.out or System.err by a logger.(ÁÔØ¦8ÔğÆâ™1
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(á–¨Şúÿÿÿÿ8ÔğÆâ™1
+Z	java:S106&"9Replace this use of System.out or System.err by a logger.(ÂÕ¤øÿÿÿÿ8ÔğÆâ™1
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(Ã¸åöüÿÿÿÿ8ÕğÆâ™1
+U	java:S1061"9Replace this use of System.out or System.err by a logger.(òÉ•ò8ÖğÆâ™1
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(ôï³¥üÿÿÿÿ8ÖğÆâ™1
+y
+java:S1128"WRemove this unused import 'ss16.bai_tap.quan_li_san_pham.model.service.ProductService'.(éÚ˜¾ıÿÿÿÿ8¬¯Çâ™1
+m
+java:S1128"KRemove this unused import 'ss16.bai_tap.quan_li_san_pham.ulti.ProductFile'.(ÜÅÅ¶ùÿÿÿÿ8×ğÆâ™1

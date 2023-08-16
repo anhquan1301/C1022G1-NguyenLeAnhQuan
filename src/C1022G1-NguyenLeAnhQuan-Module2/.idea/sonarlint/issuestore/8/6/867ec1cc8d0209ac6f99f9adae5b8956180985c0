@@ -1,0 +1,18 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨£ñê
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ä©ˆøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‡Ìˆ¥
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ş½Šûüÿÿÿÿ
+7	java:S131""Add a default case to this switch.(æ…Èª
+M	java:S106"9Replace this use of System.out or System.err by a logger.(ËìÛ%
+S	java:S106"9Replace this use of System.out or System.err by a logger.(×£š»üÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(»ñ°Íşÿÿÿÿ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(†½éøÿÿÿÿ
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(”Ú«¤
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(Û¹÷Î
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(­íá¶
+N	java:S1061"9Replace this use of System.out or System.err by a logger.(ŸóË
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(ã“Ô—
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(™¼È›
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

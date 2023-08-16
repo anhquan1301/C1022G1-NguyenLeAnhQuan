@@ -1,0 +1,23 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¯È 
+V
+java:S2259"AA "NullPointerException" could be thrown; "oos" is nullable here.(ÝÛÐK
+W
+java:S2259/"AA "NullPointerException" could be thrown; "ois" is nullable here.(¨ÿÃš
+P
+java:S1118	":Add a private constructor to hide the implicit public one.(Óðë¼
+W
+java:S1075
+"ARefactor your code to get this URI from a customizable parameter.(ª‘ªÈ
+Z
+java:S2147"DCombine this catch with the one at line 18, which has the same body.(ï­£Ä
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+Z
+java:S2147)"DCombine this catch with the one at line 39, which has the same body.(ï­£Ä
+Z
+java:S2147+"DCombine this catch with the one at line 41, which has the same body.(ýàÑÎ
+E
+java:S2093#"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+m
+java:S1128"WRemove this unused import 'ss16.bai_tap.quan_li_san_pham.controller.ProductController'.(Ë»¯Ð

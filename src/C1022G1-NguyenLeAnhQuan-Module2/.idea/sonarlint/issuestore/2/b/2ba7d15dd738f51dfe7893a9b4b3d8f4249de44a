@@ -1,0 +1,11 @@
+
+L
+java:S1066"/Merge this if statement with the enclosing one.(ÕµÙÛ8Úª°ó1
+^
+java:S3518"<Make sure "length" can't be zero before doing this division.(ÅôÚøÿÿÿÿ8é²ó1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Çµí‘8üª°ó1
+W
+java:S1854":Remove this useless assignment to local variable "result".(ÜÒ­’8üª°ó1
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(îÁ–ûÿÿÿÿ8şª°ó1
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ8şª°ó1

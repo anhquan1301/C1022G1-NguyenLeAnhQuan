@@ -1,0 +1,10 @@
+
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Çµí‘8¨‰ò1
+L
+java:S1197	"*Move the array designators [] to the type.(óó÷Åüÿÿÿÿ8‚¨‰ò1
+X	java:S125
+"<This block of commented-out lines of code should be removed.(ğÉÑÄ8‚¨‰ò1
+D
+java:S1481"'Remove this unused "rs" local variable.(õª­…8ƒ¨‰ò1
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ8ƒ¨‰ò1

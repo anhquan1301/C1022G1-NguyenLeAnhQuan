@@ -8,7 +8,13 @@ import ss16.bai_tap.quan_li_san_pham.ulti.ProductFile;
 import java.util.Scanner;
 
 public class ProductController {
-    private static IProductService ip = new ProductService();
+    private static IProductService ip;
+
+    public ProductController() {
+    }
+    public ProductController(IProductService ip) {
+        this.ip=ip;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("-----Quản lí sản phẩm-----");

@@ -1,0 +1,8 @@
+
+W
+java:S4973"<Strings and Boxed types should be compared using "equals()".(–‡¼ºÿÿÿÿÿ
+@
+java:S1197
+"*Move the array designators [] to the type.(ˆ€Ñø
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(¦Üñ“ûÿÿÿÿ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(Ò‰»

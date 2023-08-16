@@ -1,0 +1,18 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¯È 
+e
+java:S2259"OA "NullPointerException" could be thrown; "objectInputStream" is nullable here.(¨ûÌÐ
+k
+java:S22591"PA "NullPointerException" could be thrown; "objectOutputStream" is nullable here.(µÚýçøÿÿÿÿ
+W
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Áà©Ú
+Z
+java:S2147"DCombine this catch with the one at line 21, which has the same body.(ï­£Ä
+Z
+java:S2147"DCombine this catch with the one at line 23, which has the same body.(ýàÑÎ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+Z
+java:S2147-"DCombine this catch with the one at line 43, which has the same body.(ï­£Ä
+E
+java:S2093'"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

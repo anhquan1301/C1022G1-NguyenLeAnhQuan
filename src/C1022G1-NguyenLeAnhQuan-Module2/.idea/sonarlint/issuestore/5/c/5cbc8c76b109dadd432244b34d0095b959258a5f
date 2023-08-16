@@ -1,0 +1,10 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(з›зХ
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(ѓ н шяяяя8ЫпеЮ™1
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(ѓ н шяяяя8ЬпеЮ™1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ш¦€Юъяяяя8ЬпеЮ™1
+X
+java:S2696""6Make the enclosing method "static" or remove this set.(ѓ н шяяяя8ЭпеЮ™1
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(Ј€ДРэяяяя8ЭпеЮ™1

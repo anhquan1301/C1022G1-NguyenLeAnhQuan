@@ -1,0 +1,18 @@
+
+>
+java:S1643!"Use a StringBuilder instead.(¡¸Üçøÿÿÿÿ8ÖØ¥Ñž1
+>
+java:S16439"Use a StringBuilder instead.(…®ßòüÿÿÿÿ8ÖØ¥Ñž1
+>
+java:S1643F"Use a StringBuilder instead.(Å´û¼ÿÿÿÿÿ8ÖØ¥Ñž1
+>
+java:S1643H"Use a StringBuilder instead.(Åî±Žþÿÿÿÿ8ÖØ¥Ñž1
+>
+java:S1643L"Use a StringBuilder instead.(Åî±Žþÿÿÿÿ8ÖØ¥Ñž1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(Çµí‘8ÇÚ¥Ñž1
+G
+java:S1197"*Move the array designators [] to the type.(öÁ…8ÉÚ¥Ñž1
+`
+java:S1155R">Use isEmpty() to check whether the collection is empty or not.(•µ§¿þÿÿÿÿ8ÑÚ¥Ñž1
+Z	java:S106V"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿ8ÒÚ¥Ñž1
